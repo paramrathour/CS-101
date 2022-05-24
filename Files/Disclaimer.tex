@@ -1,0 +1,94 @@
+\begin{center}
+	\textbf{\large{Disclaimer}}
+\end{center}
+These are \textbf{optional} problems.
+As these problems are pretty involving, my advice to you would be to first solve exercises given in slides, lab optional questions and get comfortable with the course content.\\
+I have created these problems such that you will learn something new from each problem. Each section builds on the next; so, try to solve the problems only using the \textbf{topics mentioned in that section and previous sections}. They will suffice to solve these problems. Don't forget to look at the \href{https://github.com/paramrathour/CS-101/tree/main/Starter%20Codes}{\textbf{starter code}} (it will be in blue) for each problem which takes care of input and output behaviours. I have also prepared \textbf{model solutions} for each problem, they are available on request.
+\begin{center}
+	\textbf{\large{Acknowledgements}}
+\end{center}
+Many thanks to \href{https://www.youtube.com/user/numberphile}{Numberphile}, \href{https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw}{3Blue1Brown}, \href{https://www.youtube.com/channel/UC1_uAIS3r8Vu6JjXWvastJg}{Mathologer}, \href{https://www.youtube.com/channel/UCs4aHmggTfFrpkPcWSaBN9g}{PBS Infinite Series}, \href{https://www.youtube.com/user/1veritasium}{Veritasium} and countless other YouTube channels for developing my love for mathematics and their \emph{Fun Videos} further inspiring me to create these problems. Also thanks \href{https://en.wikipedia.org/wiki/Main_Page}{Wikipedia} and \href{http://oeis.org/}{The On-Line Encyclopedia of Integer Sequences} for freely providing their vast resources and detailed information about concepts which helped me frame these problems. Many numbers, phrases, equations and graphics are directly taken from it and modified as per my wish. I would also like to thank \href{https://projecteuler.net/}{Project Euler}, \href{https://cses.fi/problemset}{CSES}, \href{https://codeforces.com/}{Codeforces} and many other online programming practice communities which motivated me to further pursue programming and create problems. Thanks to the CS101 professors, TAs, my tutees, and others for their valuable suggestions on improving these problems. And, lastly thanks to you, reader, These problems are the result of my hard work over the years. I hope they help you in some way or the other and you enjoy solving them :).
+\begin{center}
+	\textbf{\large{Simplecpp Graphics}}
+\end{center}
+Also we will be using \href{https://www.cse.iitb.ac.in/~ranade/simplecpp/}{Simplecpp} for initial problem sets (till \ref{sec:sequences}).
+Why? because \href{https://www.cse.iitb.ac.in/~ranade/iticse16.pdf}{Introductory Programming: Let Us Cut through the Clutter!} The course book is \href{https://www.cse.iitb.ac.in/~ranade/book.html}{An Introduction to Programming through C++ by Abhiram G. Ranade}.\\
+Apart from C++, Simplecpp graphics are an interesting approach to introductory programming. Check out \href{https://en.wikipedia.org/wiki/Turtle_graphics}{Turtle Graphics -- Wikipedia} and \href{https://www.cse.iitb.ac.in/~ranade/simplecpp/gallery.html}{Simplecpp Gallery} for some fascinating examples. Graphics problems in this problem set are -- \hyperref[pp:starspiral]{Star Spiral}, \hyperref[pp:peace]{Peace}, \hyperref[pp:regularstarpolygon]{Regular Star Polygon}, \hyperref[pp:hilbertcurve]{Hilbert Curve}, \hyperref[pp:thuemorsesequence]{Thue-Morse Sequence} (some are yet to be added).
+
+Here are additional chapters of the book on Simplecpp graphics demonstrating its power.\\
+(It is just a list, you are not expected to understand/study things, CS101 is for a reason :P)
+%(But you will definitely understand all this after this course)
+\begin{description}
+	\item[Chapter 1] Turtle graphics
+	\item[Chapter 5] Coordinate based graphics, shapes besides turtles
+	\item[Chapter 15.2.3] Polygons
+	\item[Chapter 19] Gravitational simulation
+	\item[Chapter 20] Events, Frames, Snake game
+	\item[Chapter 24.2] Layout of math formulae
+	\item[Chapter 26] Composite class
+	\item[Chapter 28] Airport simulation
+\end{description}
+\clearpage
+\begin{center}
+	\textbf{\large{How to write a program? (5Cs)}}
+\end{center}
+\begin{itemize}
+\item Carefully go through the problem statement
+\item Check your understanding of problem using solved examples and practice testcases
+\item Compose the programming approach on paper
+\item Consolidate your approach by verifying its correctness on testcases by doing dry runs
+\item Code it up (finally!)
+\end{itemize}
+\begin{center}
+	\textbf{\large{Good Programming Practices}}
+\end{center}
+\begin{itemize}
+\item 
+Write documentation clearly explaining 
+	\begin{itemize}
+	\item what the program does,
+	\item how to use it,
+	\item what quantities it takes as input, and
+	\item what quantities it returns as output.
+	\end{itemize}
+\item
+Use appropriate variable/function names.
+\item 
+Extensive internal comments explaining how the program works.
+\item 
+Complete error handling with informative error messages.\\
+For example, if \verb!a = b = 0!, then the \verb!gcd(a, b)! routine should return the error message \\``\verb!gcd(0,0)! is undefined'' instead of going into an infinite loop or returning a ``division by zero'' error.
+\end{itemize}
+\begin{center}
+	\textbf{\large{Tips}}
+\end{center}
+\begin{itemize}
+\item Choose appropriate variable data types according to constraints. Example, if a variable is always an integer then it should be assigned an \verb!int! data type.
+\item Some data types that you should keep in mind are:
+	\begin{itemize}
+	\item \verb!bool!
+	\item \verb!char!
+	\item \verb!short int, int, long int, long long int! and their \verb!unsigned! counterparts
+	\item \verb!float, double, long double!
+	\end{itemize}
+\item Use \href{https://www.geeksforgeeks.org/type-conversion-in-c/}{type conversion} to your advantage to
+	\begin{itemize}
+	\item make your program unambiguous.
+	\item compute expressions containing variables of different data types.
+	\end{itemize}
+\item Find more tips at \url{https://paramrathour.github.io/CS101/tips}
+\end{itemize}
+\begin{center}
+	\textbf{\large{Get comfortable with Dry Runs}}
+\end{center}
+The most important step in debugging
+\begin{itemize}	
+\item Select a testcase
+\item Manually go through the code to trace the value of variables
+\item Check if the values of variables matches with their expected values
+\begin{itemize}
+	\item If they do not match for any variable at any time then your program is incorrect, consider debugging/rewriting it
+	\item If they match for all variables at all times, Hurray your program is correct for the current testcases!
+\end{itemize}
+\item Now repeat the procedure for a different testcase :)
+\end{itemize}

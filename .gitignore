@@ -1,0 +1,10 @@
+*.log
+*.aux
+*.gz
+*.out
+*.toc
+*.lnk
+*.exe
+*.synctex(busy)
+_minted-problems
+Model Solutions

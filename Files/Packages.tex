@@ -1,0 +1,55 @@
+\usepackage[utf8]{inputenc}
+\usepackage[DIV=16]{typearea}
+\usepackage{titlesec}
+\titleformat{\section}[block]{\sffamily\Large\filcenter\bfseries}{\S\thesection.}{0.25cm}{\Large}
+\titleformat{\subsection}[block]{\vspace{-0.7em}\large\bfseries\sffamily}{\thesubsection.}{0.2cm}{\large}
+% \newcommand{\sectionbreak}{\clearpage}
+% \newcommand{\subsectionbreak}{\clearpage}
+% \newcommand\sectionbreak{\ifnum\value{section}>1\clearpage\fi}
+\newcommand\subsectionbreak{\ifnum\value{subsection}>1\clearpage\fi}
+\usepackage[parfill]{parskip}
+\setlength{\parindent}{0em}
+\usepackage{enumitem}
+\usepackage[linesnumbered,ruled]{algorithm2e}
+
+\usepackage{amsmath, amssymb, amsfonts, amsthm, mathtools}
+\usepackage{nccmath}
+\newtheorem{theorem}{Theorem}
+\newtheorem*{note}{Note}
+\newtheorem*{funvideo}{Fun Video}
+% \newtheorem*{example}{Example}
+\newtheorem*{topics}{Topics}
+\newtheorem*{noteI}{Interesting Observation}
+\newtheorem*{fact}{Fun Fact}
+\newtheorem*{hint}{Hint}
+\theoremstyle{remark}
+\newtheorem*{sol}{Solution}
+
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+%\usetikzlibrary{quotes}
+\usepackage{xcolor}
+% \usepackage{sidecap}
+\usepackage{graphicx}
+%\usepackage{minipage}
+\graphicspath{ {./Media/}}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{minted}
+
+\usepackage{skak}
+\usepackage{datetime2}
+\usepackage{relsize}
+\usepackage{url}
+\usepackage{cprotect}
+\usepackage{comment}
+
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{
+	linktoc= all,     %set to all if you want both sections and subsections linked
+	urlcolor= blue,
+	pdftitle={Practice Problems},
+	pdfauthor = {Param Rathour, Department of Electrical Engineering, Indian Institute of Technology Bombay},
+	pdfsubject={CS 101 Computer Programming and Utilization},
+}

@@ -1,0 +1,136 @@
+% \setcounter{section}{-1}
+\setcounter{tocdepth}{2}
+\renewcommand\familydefault{\sfdefault}
+\newcommand{\op}{\operatorname}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\newcommand{\vLine}{\unskip\ \vrule\ }
+\renewcommand{\d}{\, \mathrm{d}}
+
+\newenvironment{testcases}[6]{
+	\vspace{0.2em}
+	\begin{tcolorbox}[breakable, enhanced, sharpish corners]%, colback = white]
+	%colframe=red!75!black,colback=red!5!white
+	\textbf{Input Format}\\
+	#1
+	\tcbline
+	\textbf{Output Format}\\
+	#2
+	\tcbline
+	\textbf{Constraints}\\
+	#3
+	\tcbline
+	\textbf{Sample Input}\\
+	#4
+	\tcbline
+	\textbf{Sample Output}\\
+	#5
+	\tcbline
+	\href{#6}{\textbf{Starter Code}}
+	\end{tcolorbox}
+	}
+    {
+    \vspace{-0.2em}
+}
+
+\newenvironment{testcasesFunction}[7]{
+	\vspace{0.2em}
+	\begin{tcolorbox}[breakable, enhanced, sharpish corners]%, colback = white]
+	%colframe=red!75!black,colback=red!5!white
+	\textbf{Input Format}\\
+	#1
+	\tcbline
+	\textbf{Output Format}\\
+	#2
+	\tcbline
+	\textbf{Constraints}\\
+	#3
+	\tcbline
+	\textbf{Function(s) to Implement}\\
+	#4
+	\tcbline
+	\textbf{Sample Input}\\
+	#5
+	\tcbline
+	\textbf{Sample Output}\\
+	#6
+	\tcbline
+	\href{#7}{\textbf{Starter Code}}
+	\end{tcolorbox}
+	}
+    {
+    \vspace{-0.2em}
+}
+
+\newenvironment{testcasesMore}[8]{
+	\vspace{0.2em}
+	\begin{tcolorbox}[breakable, enhanced, sharpish corners]%, colback = white]
+	\textbf{Input Format}\\
+	#1
+	\tcbline
+	\textbf{Output Format}\\
+	#2
+	\tcbline
+	\textbf{Constraints}\\
+	#3
+	\tcbline
+	\textbf{Sample Input}\\
+	#4
+	\tcbline
+	\textbf{Sample Output}\\
+	#5
+	\tcbline
+	\textbf{More Test cases}\\
+	\href{#6}{Input} and \href{#7}{Output} files
+	\tcbline
+	\href{#8}{\textbf{Starter Code}}
+	\end{tcolorbox}
+	}
+    {
+    \vspace{-0.2em}
+}
+
+\newenvironment{testcasesFunctionMore}[9]{
+	\vspace{0.2em}
+	\begin{tcolorbox}[breakable, enhanced, sharpish corners]%, colback = white]
+	%colframe=red!75!black,colback=red!5!white
+	\textbf{Input Format}\\
+	#1
+	\tcbline
+	\textbf{Output Format}\\
+	#2
+	\tcbline
+	\textbf{Constraints}\\
+	#3
+	\tcbline
+	\textbf{Function(s) to Implement}\\
+	#4
+	\tcbline
+	\textbf{Sample Input}\\
+	#5
+	\tcbline
+	\textbf{Sample Output}\\
+	#6
+	\tcbline
+	\textbf{More Test cases}\\
+	\href{#7}{Input} and \href{#8}{Output} files
+	\tcbline
+	\href{#9}{\textbf{Starter Code}}
+	\end{tcolorbox}
+	}
+    {
+    \vspace{-0.2em}
+}
+
+\newenvironment{correctanswer}[3]{
+	\vspace{0.2em}
+	\begin{tcolorbox}[breakable, enhanced, sharpish corners]%, colback = white]
+	\textbf{Output Format}\\
+	#1\\
+	\textbf{Correct Answer}\\
+	#2\\
+	\href{#3}{\textbf{Starter Code}}
+	\end{tcolorbox}
+	}
+    {
+    \vspace{0em}
+}
