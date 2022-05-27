@@ -153,7 +153,9 @@ Order of proference table
 # Arrays II
 * ✓ Gray Code (throwback to LFSR)
 * ✓ Minesweeper
-* Sandpiles
+* Generating Functions (some combinatorics)
+	https://youtu.be/VLbePGBOVeg
+<!-- * Sandpiles -->
 + Majority Element (Give situation, Moore's Voting Algorithm)
 * Counting Sort
 + Large Factorials
@@ -163,6 +165,7 @@ Order of proference table
 
 # Recursion and Arrays
 + Tower of Hanoi
+	https://youtu.be/MbonokcLbNo The ultimate tower of Hanoi algorithm
 + Remove Duplicates (Sorted array and unsorted array (do in nlogn))
 	https://codeforces.com/contest/978/problem/A
 + Maximum Element
