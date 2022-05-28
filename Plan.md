@@ -17,7 +17,6 @@ Order of proference table
 	more - thue-morse, recaman, fourier, tiling
 ✓ switch to c++ where
 
-\href{https://youtu.be/qhbuKbxJsk8}{Times Tables, Mandelbrot and the Heart of Mathematics -- Mathologer}
 
 # Introduction
 <!-- + Hilbert Curve (mention other graphics problems) -->
@@ -63,6 +62,8 @@ Order of proference table
 + ✓ ISBN
 	11.11.11 - Numberphile https://youtu.be/sPFWfAxIiwg
 + ✓ Calendar (Doomsday method, https://en.wikipedia.org/wiki/Doomsday_rule)
+* Spiral Function and its Inverse
+	Concrete Maths
 <!-- * Fair Playoff
 	https://codeforces.com/contest/1535/problem/A -->
 
@@ -80,7 +81,6 @@ Order of proference table
 * Frobenius Number
 
 # Functions
-(Calendar)
 <!-- * Polydivisible number -->
 + ✓  Collatz Conjecture
 <!-- * Polygonal number -->
@@ -98,7 +98,10 @@ Order of proference table
 + ✓ Regular Star Polygons
 	https://en.wikipedia.org/wiki/Star_polygon
 	Schläfli symbol: https://en.wikipedia.org/wiki/Schl%C3%A4fli_symbol
+* Times Tables, Mandelbrot and the Heart of Mathematics -- Mathologer
+	https://youtu.be/qhbuKbxJsk8
 <!-- * MMI -->
+* Möbius function
 
 # Recursion I
 + ✓ Ackermann Function
@@ -131,7 +134,8 @@ Order of proference table
 + ✓ the Van Eck Sequence
 + Thue-Morse Sequence aka Fair Share Sequence
 * ✓ Recaman Sequence with Drawing
-+ ✓ LFSR
+* Farey Sequence, Stern Brocot tree way
+	Generate all fractions
 <!-- * Long Comparison
 	https://codeforces.com/contest/1613/problem/A -->
 
@@ -143,9 +147,6 @@ Order of proference table
 * ✓ Formatter (aLtErNaTiNg cApS, tOGGLE cASE, Capitalize Each Word, UPPERCASE, lowercase, Sentence case)
 	sentence case becomes capital after .?!
 * ✓ Perfect Faro Shuffle (Outer and Inner)
-* ✓ Vignere Cipher, key rotation check 720 (can do Perfect Faro Shuffle (Inner))
-*	Fourier Circles
-	https://cs101.bodhi.cse.iitb.ac.in/assignments/details/632
 <!-- * Valid Brackets -->
 <!-- * Ulam Spiral -->
 <!-- + Sieve of Eratosthenes -->
@@ -161,7 +162,6 @@ Order of proference table
 + Large Factorials
 * Rotate a matrix
 <!-- + Currency Sums -->
-* Brainfuck Compiler (short as cell size, dynamically size array)
 
 # Recursion and Arrays
 + Tower of Hanoi
@@ -172,9 +172,20 @@ Order of proference table
 + QuickSort
 * Determinant of a matrix
 	https://cs101.bodhi.cse.iitb.ac.in/assignments/details/939
-* Huffman Code
+* Dearrangements
 * FFT (polynomial multiplication)
 
+# Real-Life Applications (Easy)
++ ✓ Linear Feedback Shift Register - Pseudo Random Generator
+* ✓ Vignere Cipher (can do Perfect Faro Shuffle (Inner)) - Cryptogaphy
+* Iterated Function Systems (rand function)
+	Sierpinsky triangle,  Barnsley's Fractal Fern
+* Fourier Circles
+	https://cs101.bodhi.cse.iitb.ac.in/assignments/details/632
+* Huffman Code - Compression
+* Hamming Code - Error Detection
+* Automata Modeller - Computation
+* Brainfuck Compiler (short as cell size, dynamically size array) - Compilers
 
 # Classes
 + Polynomials
