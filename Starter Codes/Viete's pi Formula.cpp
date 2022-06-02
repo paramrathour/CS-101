@@ -8,7 +8,7 @@ main_program {
 	cin >> total_test_cases;
 	repeat (total_test_cases) {
 		int n;
-		cin >> n; // n >= 0
+		cin >> n; // n >= 1
 		long double pi = 1, radical = 0;
 		// calculate pi here
 		cout << pi << "\n";

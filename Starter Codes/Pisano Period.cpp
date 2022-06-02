@@ -8,7 +8,7 @@ main_program {
 		int n, fibonacci_previous = 0, fibonacci_current = 1, fibonacci_next, period = 0;
 		cin >> n;
 		// calculate the period here
-		cout << period << "\n";
+		cout << period << "\t";
 	}
 	return 0;
 }
