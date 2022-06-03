@@ -10,7 +10,7 @@ How does a computer generate truly random numbers? Computers are deterministic w
 An LFSR is defined by
 \begin{itemize}	
 	\item $n$ state variables $x_1, x_2, x_3,\ldots, x_n$ (collectively called as the state of LFSR (``register'')) with their initial values (called taps) $t_1, t_2, t_3,\ldots, t_n$ ($t_i$ is 0 or 1).
-	\item A feedback polynomial $c_1x_0 + c_2x_1 + c_3x_2 + \cdots +  c_nx_{n-1} + x_n$ ($c_i$ is 0 or 1) which updates the state of LFSR as follows
+	\item A feedback polynomial $c_1x^0 + c_2x^1 + c_3x^2 + \cdots +  c_nx^{n-1} + x^n$ ($c_i$ is 0 or 1) which updates the state of LFSR as follows
 	\begin{itemize}
 		\item $\op{next}(x_1, x_2, x_3,\ldots, x_{n-1}) = (x_2, x_3, x_4,\ldots, x_n)$ -- this is called ``shifting'' next value of $x_1$ becomes $x_2$, next value of $x_2$ becomes $x_3$, and so on.
 		\item $\op{next}(x_n) =  c_1x_1 \oplus c_2x_2 \oplus \cdots \oplus c_{n-1}x_{n-1}\oplus c_nx_n$ where $\oplus$ is the binary \href{https://en.wikipedia.org/wiki/Exclusive_or}{xor} operator -- this is the ``linear feedback''.
