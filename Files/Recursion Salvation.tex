@@ -60,7 +60,7 @@ But surprisingly there is an even better way! Horner's Method as described in \r
 Evaluate polynomial given by coefficients at $x$ using Horner's Method for all test cases.
 \begin{testcasesFunction}
 	{$t$ \hfill(number of test cases, an integer)\\
-	$x_i\qquad n_i \quad a_0\ a_1\ a_2 \cdots a_n$ \hfill($n_i+3$ space seperated integers for each testcase)}
+	$x_i\qquad n_i \quad a_0\ a_1\ a_2 \cdots a_{n_i}$ \hfill($n_i+3$ space seperated integers for each testcase)}
 	{$f(x_i)$\hfill(each on a newline)}
 	{$1 < x_i,\ n_i, a_i \leq 10^{4}$\\
 	Also assume that the calculations are always within the range of long long}
@@ -69,6 +69,9 @@ Evaluate polynomial given by coefficients at $x$ using Horner's Method for all t
 	{1\\1\\27\\80\\486421\\4552224296}
 	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Horner's Method.cpp}
 \end{testcasesFunction}
+\begin{noteI}
+If recursion was not allowed do you think it would be possible given the input order ($a_0\ a_1\ a_2 \cdots a_{n_i}$)? Problem \ref{pp:simplecontinuedfractions} had inputs in reverse order $a_{n_i}\ a_{n_{i-1}}\ \ldots\ a_1\ a_0$. By taking inspiration from recursion, solve it when the inputs are in correct order ($a_0\ a_1\ a_2 \cdots a_{n_i}$).
+\end{noteI}
 \begin{funvideo}
 \href{https://youtu.be/cUzklzVXJwo}{How Imaginary Numbers Were Invented -- Veritasium}
 \end{funvideo}
@@ -168,9 +171,6 @@ Calculate $\op{P}(n)$ for all test cases using\ref{eq:pnt} or otherwise :).
 	{1\\2\\3\\5\\7\\42\\627\\5604\\37338}
 	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Partitions.cpp}
 \end{testcasesFunction}
-\begin{noteI}
-If the last output took a long time then think how you can do the calculations faster?
-\end{noteI}
 \begin{funvideo}
 \href{https://youtu.be/NjCIq58rZ8I}{Partitions -- Numberphile}\\
 \href{https://youtu.be/iJ8pnCO0nTY}{The hardest What comes next (Euler's pentagonal formula) -- Mathologer}
