@@ -74,11 +74,11 @@ Order of proference table
 + ✓ Kempner Series
 + ✓ Pisano Period
 <!-- + Harshad number -->
-* Divisibility test
+* Divisibility test for any number
 + ✓ Base -2
 + ✓ Base Conversion
-* Sum of Cubes
-	https://codeforces.com/contest/1490/problem/C
+<!-- * Sum of Cubes
+	https://codeforces.com/contest/1490/problem/C -->
 
 # Function Admiration
 <!-- * Polydivisible number -->
@@ -134,7 +134,7 @@ Order of proference table
 + ✓ Van Eck's Sequence
 + ✓ Look-and-say Sequence
 	https://www.youtube.com/watch?v=ea7lJkEhytA Look-and-Say Numbers (feat John Conway) - Numberphile
-+ Thue-Morse Sequence aka Fair Share Sequence
++ ✓ Thue-Morse Sequence aka Fair Share Sequence
 * ✓ Recaman Sequence with Drawing
 + ✓ Farey Sequence
 	https://youtu.be/DpwUVExX27E Infinite Fractions - Numberphile
@@ -146,6 +146,9 @@ Order of proference table
 <!-- + Discrete Convolution
 	https://en.wikipedia.org/wiki/Convolution -->
 <!-- + Moving average -->
+* Newton interpolation formula
+	Finite Difference Method
+	Generate the polynomial
 * Long Comparison
 	https://codeforces.com/contest/1613/problem/A
 * Next Permutation
@@ -178,6 +181,7 @@ Order of proference table
 	https://codeforces.com/contest/978/problem/A
 + Maximum Element
 + QuickSort
+* 	The Stern-Brocot Tree 
 * Determinant of a matrix
 	https://cs101.bodhi.cse.iitb.ac.in/assignments/details/939
 * Dearrangements Generator

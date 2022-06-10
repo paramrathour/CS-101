@@ -1,6 +1,6 @@
-\section{Sequence Imminece}{\label{sec:sequences}}
+\section{Sequence Imminence}{\label{sec:sequences}}
 \begin{topics}
-\verb!array! traversal, manipulation and previous sections.
+\verb!array! traversal, manipulation and previous sections. Some problems can be solved without arrays too.
 \end{topics}
 \begin{note}
 	This is the last problem set where we use Simplecpp. We will move onto C++ from the next problem set.
@@ -18,11 +18,11 @@ For example, in the above arrangement,\\
 when $k=1,$ 1 kills 2, 3 kills 4, 5 kills 6, 7 kills 8, 9 kills 10, 1 kills 3, 5 kills 7, 9 kills 1 and 5 kills 9. So, 5 survives;\\% and is killed last;\\
 when $k=2,$ 1 kills 3, 4 kills 6, 7 kills 9, 10 kills 2, 4 kills 7, 8 kills 1, 4 kills 8, 10 kills 5 and 4 kills 10. So, 4 survives.\\% and is killed last.
 \textbf{Problem Statement:}\\
-For a given $n, k$ pair, and starting position $1$, print the terrorists in the order they are killed.
+For a given $n, k$ pair, and starting position $1$, print the terrorists in the sequence they are killed.
 \begin{testcases}
 	{$t$ \hfill(number of test cases, an integer)\\
 	$n_1\ k_1\ \quad n_2\ k_2\ \quad \ldots\quad n_t\ k_t$ \hfill($t$ space seperated pairs (number of terrorists $n$ and $k$) for each testcase)}
-	{Terrorists in the order they are killed \hfill(each test case on a newline)}
+	{Terrorists in the sequence they are killed \hfill(each test case on a newline)}
 	{$1 \leq k_i \leq n_i \leq 100$}
 	{9\\1 1\quad2 1\quad4 1\quad4 2\quad8 1\quad8 3\quad10 2\quad16 7\quad50 25}
 	{1\\2 1\\2 4 3 1\\3 2 4 1\\2 4 6 8 3 7 5 1\\4 8 5 2 1 3 7 6\\3 6 9 2 7 1 8 5 10 4\\8 16 9 2 12 6 3 15 14 1 5 11 10 4 13 7\\26 2 29 6 34 12 41 20 50 32 14 46 30 15 49 37 23 11 3 43 36 28 24 21 19 22 27 35 42 1 10 33 4 25 7 44 38 31 40 5 18 16 39 9 17 45 48 13 8 47}
@@ -36,11 +36,13 @@ For a given $n, k$ pair, and starting position $1$, print the terrorists in the 
 \end{funvideo}
 \subsection{Van Eck's Sequence}
 The Van Eck's Sequence is defined as follows:
-
-$a_0 = 0$ then for $n>0$,\\
-$a_{n+1} = n-m$, where $m$ is the maximal index $<n$ such that $a_{m}=a_{n}$.
-\\If such $m<n$ doesn't exist, then we take $m=n\ \rightarrow\ a_{n+1}=0$.
-
+\begin{itemize}
+	\item $a_0 = 0$ then for $n>0$,\\
+	\item $a_{n+1} = \begin{cases}
+		n-m & \text{where $m$ the maximal index $<n$ exists, such that $a_{m}=a_{n}$}\\
+		0 & \text{if such $m<n$ doesn't exist, then we take $m=n\ \rightarrow\ a_{n+1}=0$.}
+	\end{cases}$
+\end{itemize}
 \textbf{Problem Statement:}\\
 Generate the first $n+1$ elements $a_0,a_1,\ldots,a_n$ of the Van Eck's Sequence.
 \begin{testcasesMore}
@@ -91,7 +93,7 @@ For example, starting with the sequence \textbf{0},
 	\item Append complement of \textbf{01}, we get 01\textbf{10}
 	\item Append complement of \textbf{0110}, we get 0110\textbf{1001} and so on.
 \end{itemize}
-Also, by using Thue–Morse sequence elements in the turtle simulator, we get a mysterious curve\footnote{called Koch curve, it is a fractal curve that has infinite length but contained in a finite area. Can you see why?} by following the below rule.
+Also, by using Thue-Morse sequence elements in the turtle simulator, we get a mysterious curve\footnote{called Koch curve, it is a fractal curve that has infinite length but contained in a finite area. Can you see why?} by following the below rule.
 \begin{itemize}
 	\item If an element is 0, then the turtle rotates \verb!right! by 180\textdegree.
 	\item If an element is 1, then the turtle moves \verb!forward! by one unit and then rotates \verb!right! by 60\textdegree.
@@ -169,32 +171,128 @@ Scale the curve in such a way that it roughly takes same width and height for al
 		\includegraphics[width = \linewidth]{Thue-Morse Sequence/1729.png}
 		\caption{$n=1729$}
 	\end{subfigure}
-	\caption{The outputs for non-odd powers of 2}
+	\caption{The outputs for numbers which are not a odd power of 2}
 \end{figure}
 \begin{funvideo}
 	\href{https://youtu.be/prh72BLNjIk}{The Fairest Sharing Sequence Ever -- Stand-up Maths}\\
 	\href{https://youtu.be/gB9n2gHsHN4}{Fractals are typically not self-similar -- 3Blue1Brown}
 \end{funvideo}
-\KOMAoptions{paper=A4}
-\recalctypearea
-\subsection{Farey Sequence}
+\subsection{Recaman's Sequence}{\label{pp:recamanssequence}}
+The Recaman's sequence is defined as below:
+\begin{itemize}
+	\item $r_0 = 0$
+	\item $r_n = \begin{cases}
+		r_{n-1} - n & \text{if } r_{n-1}-n>0 \text{ and } \forall i <n,\ r_i\neq r_{n-1}-n, \text{ i.e. $r_{n-1}-n$ is positive and has not yet occurred in the sequence}\\
+		r_{n-1} + n & \text{otherwise}
+	\end{cases}$
+\end{itemize}
+Also, by using Recaman's sequence elements in the turtle simulator, we can get beautiful curves as shown in \ref{fig:recamanssequence} by following the below rules:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Recaman's Sequence.pdf}
+	\caption{Recaman's Sequence Drawing Procedure}
+	\label{fig:recamanssequence}
+\end{figure}
+\begin{itemize}
+\item Create a canvas named ``Recamans Sequence'' with width=1920, and height=1080.
+\item Connect all consecutive terms using semicircles.
+\item The semicircles should be parallel to $x-$axis with end points as consecutive terms
+\item The semicircles should alternate above and below the $x-$axis; i.e., it should be below the axis when connecting $r_0, r_1,$ above the axis when connecting $r_1, r_2,$ again below for $r_2, r_3,$ and so on.
+\item The figure should be dynamic; i.e., the $x-$axis should be such that for any $n$ the figure takes up at least half the canvas and it also remains within the canvas.
+\item Don't draw the numbers and the axis. They are just to visualise the construction.
+\end{itemize}
+\textbf{Problem Statement:}\\
+Generate the first $n+1$ elements $r_0,r_1,\ldots,r_n$ of the Recaman's Sequence and draw the corresponding curve using \verb!turtleSim!.
+\begin{testcasesMore}
+	{$n$ \hfill(a single integer)}
+	{First $n+1$ elements of the Recaman's sequence and the curve.}
+	{$1 \leq n \leq 1000$}
+	{60}
+	{0 1 3 6 2 7 13 20 12 21 11 22 10 23 9 24 8 25 43 62 42 63 41 18 42 17 43 16 44 15 45 14 46 79 113 78 114 77 39 78 38 79 37 80 36 81 35 82 34 83 33 84 32 85 31 86 30 87 29 88 28}
+	{https://github.com/paramrathour/CS-101/tree/main/Test Cases/Recaman's Sequence/Input}
+	{https://github.com/paramrathour/CS-101/tree/main/Test Cases/Recaman's Sequence/Output}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Recaman's Sequence.cpp}
+\end{testcasesMore}
+\textbf{The output curve}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{0.3\linewidth}
+		\includegraphics[width = \linewidth]{Recaman's Sequence/10.png}
+		\caption{$n=10$}
+	\end{subfigure}
+	\begin{subfigure}{0.3\linewidth}
+		\includegraphics[width = \linewidth]{Recaman's Sequence/60.png}
+		\caption{$n=60$}
+	\end{subfigure}
+	\begin{subfigure}{0.3\linewidth}
+		\includegraphics[width = \linewidth]{Recaman's Sequence/75.png}
+		\caption{$n=75$}
+	\end{subfigure}
+	\caption{Output Ford Circles for few $n$}
+\end{figure}
+\begin{funvideo}
+	\href{https://youtu.be/FGC5TdIiT9U}{The Slightly Spooky Recamán Sequence -- Numberphile}
+\end{funvideo}
+\subsection{Farey Sequence}{\label{pp:fareysequence}}
 Farey sequence has all rational numbers in range $[0/1\ \text{to}\ 1/1]$ sorted \emph{in increasing order} such that the denominators are less than or equal to $n$ and all numbers are in \emph{reduced forms} i.e., 2/4 does not belong to this sequence as it can be reduced to 1/2.\\
 For example, $n=4$, the possible rational numbers in increasing order are $\ 0/1,\ 1/4,\ 1/3,\ 1/2,\ 2/3,\ 3/4,\ 1/1$.
+\vspace{-1em}
+\subsubsection*{Stern-Brocot Tree}
+\vspace{-0.7em}
+To generate the Farey Sequence, we have to first look at the {Stern-Brocot Tree} shown in \ref{fig:sternbrocottree}.
+\begin{figure}[H]
+	\centering
+	\scalebox{1}[0.8]{\includegraphics[width=0.6\linewidth]{Stern-Brocot Tree.pdf}}
+	\caption{The Stern-Brocot Tree for Level $1-4$}
+	\label{fig:sternbrocottree}
+\end{figure}
+In this tree, a child is given by the \href{https://en.wikipedia.org/wiki/Mediant_(mathematics)}{mediant} of their parents; i.e, for child of parents $\mfrac{a}{c}$ and $\mfrac{b}{d}$ is $\mfrac{a+b}{c+d}$.
+
+Some examples for parent, child are as follows -- $\left(\mfrac{0}{1}, \mfrac{1}{1} \rightarrow \mfrac{1}{2}\right)$, $\left(\mfrac{1}{1}, \mfrac{1}{0} \rightarrow \mfrac{2}{1}\right)$, $\left(\mfrac{0}{1}, \mfrac{1}{2} \rightarrow \mfrac{1}{3}\right)$, $\left(\mfrac{1}{2}, \mfrac{1}{1} \rightarrow \mfrac{2}{3}\right)$, $\left(\mfrac{1}{1}, \mfrac{2}{1} \rightarrow \mfrac{3}{2}\right)$, $\left(\mfrac{2}{1}, \mfrac{1}{0} \rightarrow \mfrac{3}{1}\right)$,
+
+Notice that the farey sequence for corresponding $n$ is the subset of vertices of this tree calculated upto level $n$.
+
+Also, for every fraction $\mfrac{p}{q}$ in the farey sequence draw a circle with centre at $\left(\mfrac{p}{q}, \mfrac{1}{2q^2}\right)$ and radius $\left(\mfrac{1}{2q^2}\right)$. You may need to do some scaling to get a proper figure.
 
 \textbf{Problem Statement:}\\
-Generates the Farey Sequence for corresponding $n$ for all test cases.
+Generate the Farey Sequence for corresponding $n$ using ideas from the Stern-Brocot Tree or otherwise and draw the circles.
+\begin{hint}
+	Recursion!
+\end{hint}
 \begin{testcasesMore}
-	{$t$ \hfill(number of test cases, an integer)\\
-	$n_1\ n_2\ \ldots\ n_t$ \hfill($t$ space seperated numbers for each testcase)}
-	{Corresponding numbers in sequence in $p/q$ format \hfil(each test case on a newline)}
-	{$1\leq n_i\leq 100$ \hfill(an integer)}
-	{10\\1 2 3 4 5 6 7 8 13 21}
-	{0/1 1/1\\0/1 1/2 1/1\\0/1 1/3 1/2 2/3 1/1\\0/1 1/4 1/3 1/2 2/3 3/4 1/1\\0/1 1/5 1/4 1/3 2/5 1/2 3/5 2/3 3/4 4/5 1/1\\0/1 1/6 1/5 1/4 1/3 2/5 1/2 3/5 2/3 3/4 4/5 5/6 1/1\\0/1 1/7 1/6 1/5 1/4 2/7 1/3 2/5 3/7 1/2 4/7 3/5 2/3 5/7 3/4 4/5 5/6 6/7 1/1\\0/1 1/8 1/7 1/6 1/5 1/4 2/7 1/3 3/8 2/5 3/7 1/2 4/7 3/5 5/8 2/3 5/7 3/4 4/5 5/6 6/7 7/8 1/1\\0/1 1/13 1/12 1/11 1/10 1/9 1/8 1/7 2/13 1/6 2/11 1/5 2/9 3/13 1/4 3/11 2/7 3/10 4/13 1/3 4/11 3/8 5/13 2/5 5/12 3/7 4/9 5/11 6/13 1/2 7/13 6/11 5/9 4/7 7/12 3/5 8/13 5/8 7/11 2/3 9/13 7/10 5/7 8/11 3/4 10/13 7/9 4/5 9/11 5/6 11/13 6/7 7/8 8/9 9/10 10/11 11/12 12/13 1/1\\0/1 1/21 1/20 1/19 1/18 1/17 1/16 1/15 1/14 1/13 1/12 1/11 2/21 1/10 2/19 1/9 2/17 1/8 2/15 1/7 3/20 2/13 3/19 1/6 3/17 2/11 3/16 4/21 1/5 4/19 3/14 2/9 3/13 4/17 5/21 1/4 5/19 4/15 3/11 5/18 2/7 5/17 3/10 4/13 5/16 6/19 1/3 7/20 6/17 5/14 4/11 7/19 3/8 8/21 5/13 7/18 2/5 7/17 5/12 8/19 3/7 7/16 4/9 9/20 5/11 6/13 7/15 8/17 9/19 10/21 1/2 11/21 10/19 9/17 8/15 7/13 6/11 11/20 5/9 9/16 4/7 11/19 7/12 10/17 3/5 11/18 8/13 13/21 5/8 12/19 7/11 9/14 11/17 13/20 2/3 13/19 11/16 9/13 7/10 12/17 5/7 13/18 8/11 11/15 14/19 3/4 16/21 13/17 10/13 7/9 11/14 15/19 4/5 17/21 13/16 9/11 14/17 5/6 16/19 11/13 17/20 6/7 13/15 7/8 15/17 8/9 17/19 9/10 19/21 10/11 11/12 12/13 13/14 14/15 15/16 16/17 17/18 18/19 19/20 20/21 1/1}
-	{https://github.com/paramrathour/CS-101/tree/main/Test Cases/Farey Sequence/Input.txt}
-	{https://github.com/paramrathour/CS-101/tree/main/Test Cases/Farey Sequence/Output.txt}
+	{$n$ \hfill(a single integer)}
+	{Corresponding numbers in farey sequence in $p/q$ format with the circles.}
+	{$1\leq n\leq 30$ \hfill(an integer)}
+	{7}
+	{0/1 1/7 1/6 1/5 1/4 2/7 1/3 2/5 3/7 1/2 4/7 3/5 2/3 5/7 3/4 4/5 5/6 6/7 1/1}
+	% {0/1 1/1\\0/1 1/2 1/1\\0/1 1/3 1/2 2/3 1/1\\0/1 1/4 1/3 1/2 2/3 3/4 1/1\\0/1 1/5 1/4 1/3 2/5 1/2 3/5 2/3 3/4 4/5 1/1\\0/1 1/6 1/5 1/4 1/3 2/5 1/2 3/5 2/3 3/4 4/5 5/6 1/1\\0/1 1/7 1/6 1/5 1/4 2/7 1/3 2/5 3/7 1/2 4/7 3/5 2/3 5/7 3/4 4/5 5/6 6/7 1/1\\0/1 1/8 1/7 1/6 1/5 1/4 2/7 1/3 3/8 2/5 3/7 1/2 4/7 3/5 5/8 2/3 5/7 3/4 4/5 5/6 6/7 7/8 1/1\\0/1 1/13 1/12 1/11 1/10 1/9 1/8 1/7 2/13 1/6 2/11 1/5 2/9 3/13 1/4 3/11 2/7 3/10 4/13 1/3 4/11 3/8 5/13 2/5 5/12 3/7 4/9 5/11 6/13 1/2 7/13 6/11 5/9 4/7 7/12 3/5 8/13 5/8 7/11 2/3 9/13 7/10 5/7 8/11 3/4 10/13 7/9 4/5 9/11 5/6 11/13 6/7 7/8 8/9 9/10 10/11 11/12 12/13 1/1\\0/1 1/21 1/20 1/19 1/18 1/17 1/16 1/15 1/14 1/13 1/12 1/11 2/21 1/10 2/19 1/9 2/17 1/8 2/15 1/7 3/20 2/13 3/19 1/6 3/17 2/11 3/16 4/21 1/5 4/19 3/14 2/9 3/13 4/17 5/21 1/4 5/19 4/15 3/11 5/18 2/7 5/17 3/10 4/13 5/16 6/19 1/3 7/20 6/17 5/14 4/11 7/19 3/8 8/21 5/13 7/18 2/5 7/17 5/12 8/19 3/7 7/16 4/9 9/20 5/11 6/13 7/15 8/17 9/19 10/21 1/2 11/21 10/19 9/17 8/15 7/13 6/11 11/20 5/9 9/16 4/7 11/19 7/12 10/17 3/5 11/18 8/13 13/21 5/8 12/19 7/11 9/14 11/17 13/20 2/3 13/19 11/16 9/13 7/10 12/17 5/7 13/18 8/11 11/15 14/19 3/4 16/21 13/17 10/13 7/9 11/14 15/19 4/5 17/21 13/16 9/11 14/17 5/6 16/19 11/13 17/20 6/7 13/15 7/8 15/17 8/9 17/19 9/10 19/21 10/11 11/12 12/13 13/14 14/15 15/16 16/17 17/18 18/19 19/20 20/21 1/1}
+	{https://github.com/paramrathour/CS-101/tree/main/Test Cases/Farey Sequence/Input}
+	{https://github.com/paramrathour/CS-101/tree/main/Test Cases/Farey Sequence/Output}
 	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Farey Sequence.cpp}
 \end{testcasesMore}
+\textbf{The output circles (Ford Circles)}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{0.3\linewidth}
+		\includegraphics[width = \linewidth]{Farey Sequence/3.png}
+		\caption{$n=3$}
+	\end{subfigure}
+	\begin{subfigure}{0.3\linewidth}
+		\includegraphics[width = \linewidth]{Farey Sequence/7.png}
+		\caption{$n=7$}
+	\end{subfigure}
+	\begin{subfigure}{0.3\linewidth}
+		\includegraphics[width = \linewidth]{Farey Sequence/10.png}
+		\caption{$n=10$}
+	\end{subfigure}
+	\caption{Output Ford Circles for few $n$}
+\end{figure}
+\begin{noteI}
+	If the outputs take a long time then how can you make it faster?. Also, try calculating terms mathematically to get the fastest way!
+\end{noteI}
 \begin{funvideo}
 \href{https://youtu.be/DpwUVExX27E}{Infinite Fractions -- Numberphile}\\
 \href{https://youtu.be/0hlvhQZIOQw}{Funny Fractions and Ford Circles -- Numberphile}
 \end{funvideo}
+\KOMAoptions{paper=A4}
+\recalctypearea
