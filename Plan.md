@@ -76,7 +76,9 @@ Order of proference table
 <!-- + Harshad number -->
 * Divisibility test for any number
 + ✓ Base -2
+<!-- * Base 3 with -1,0,1 -->
 + ✓ Base Conversion
+* Extended Euclidean Algorithm (https://cp-algorithms.com/algebra/extended-euclid-algorithm.html)
 <!-- * Sum of Cubes
 	https://codeforces.com/contest/1490/problem/C -->
 
@@ -92,13 +94,15 @@ Order of proference table
 		Pi hiding in prime regularities: https://youtu.be/NaL_Cb42WyY
 		Dirichlet character: https://en.wikipedia.org/wiki/Dirichlet_character
 	Output is pi?
-* Möbius function (using square-free or Liouville function)
-	https://en.wikipedia.org/wiki/M%C3%B6bius_function
+<!-- * Möbius function (using square-free or Liouville function)
+	https://en.wikipedia.org/wiki/M%C3%B6bius_function -->
 + ✓ Euler's Totient Function (Prime Factorise)
 <!-- * MMI -->
 <!-- * Discrete Logarithm (Inverse problem of Modular Exponentiation) -->
 	https://youtu.be/KZ1BVlURwfI A Video about the Number 10 - Numberphile
-<!-- * ✓ Prime Checker -->
+* ✓ Miller Rabin Primality Test
+	Deterministic version - for testing 64 bit integer it is enough to check the first 12 prime bases: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, and 37 (https://cp-algorithms.com/algebra/primality_tests.html#deterministic-version)
+	https://youtu.be/_MscGSN5J6o
 <!-- * ✓ AntiPrime Checker -->
 + ✓ Regular Star Polygons
 	https://en.wikipedia.org/wiki/Star_polygon
@@ -129,67 +133,63 @@ Order of proference table
 
 # Sequence Imminece
 + ✓ Josephus Problem (generalisations)
-* Ducci Sequence
-	Steps till 0
+<!-- * Ducci Sequence
+	Steps till 0 -->
+* Prime Numbers
+	Using Sieve of Eratosthenes
 + ✓ Van Eck's Sequence
 + ✓ Look-and-say Sequence
 	https://www.youtube.com/watch?v=ea7lJkEhytA Look-and-Say Numbers (feat John Conway) - Numberphile
 + ✓ Thue-Morse Sequence aka Fair Share Sequence
-* ✓ Recaman Sequence with Drawing
++ ✓ Recaman Sequence with Drawing
 + ✓ Farey Sequence
 	https://youtu.be/DpwUVExX27E Infinite Fractions - Numberphile
 	Stern Brocot tree way
 	Generate all fractions
 
-# Arrays Leeway (Function and Arrays)
-* Frobenius Number
+# Arrays Leeway (2-D Arrays, Function and Arrays)
 <!-- + Discrete Convolution
 	https://en.wikipedia.org/wiki/Convolution -->
 <!-- + Moving average -->
 * Newton interpolation formula
 	Finite Difference Method
 	Generate the polynomial
-* Long Comparison
-	https://codeforces.com/contest/1613/problem/A
+<!-- * Frobenius Number -->
++ Majority Element (Give situation, Moore's Voting Algorithm)
 * Next Permutation
 	https://cs101.bodhi.cse.iitb.ac.in/assignments/details/924
-* Lunar Arithmetic (Dismal Arithmetic) (Implement multiplication)
-	https://youtu.be/cZkGeR9CWbk, https://en.wikipedia.org/wiki/Lunar_arithmetic
+* ✓ Perfect Faro Shuffle (Outer and Inner)
 * ✓ Formatter (aLtErNaTiNg cApS, tOGGLE cASE, Capitalize Each Word, UPPERCASE, lowercase, Sentence case)
 	sentence case becomes capital after .?!
-* ✓ Perfect Faro Shuffle (Outer and Inner)
++ ✓ Minesweeper
+* ✓ Gray Code (throwback to LFSR)
+* Rotate a matrix
+<!-- * Long Comparison
+	https://codeforces.com/contest/1613/problem/A -->
 <!-- * Valid Brackets -->
 <!-- * Ulam Spiral -->
 
-# Arrays II
-<!-- + Sieve of Eratosthenes -->
-* ✓ Gray Code (throwback to LFSR)
-* Generating Functions (some combinatorics)
-	https://youtu.be/VLbePGBOVeg
-* ✓ Minesweeper
+# Array Powerplay (Recursion and Arrays, Advanced Arrays)
 <!-- * Sandpiles -->
-+ Majority Element (Give situation, Moore's Voting Algorithm)
-* Counting Sort
-+ Large Factorials
-* Rotate a matrix
+<!-- + Large Factorials -->
 <!-- + Currency Sums -->
-
-# Recursion and Arrays
-+ Tower of Hanoi
++ Tower of Hanoi (Throwback to Gray Code https://cp-algorithms.com/algebra/gray-code.html#practice-problems)
 	https://youtu.be/MbonokcLbNo The ultimate tower of Hanoi algorithm
++ Maximum Element
++ Another Binary Search application
+* Counting Sort
 + Remove Duplicates (Sorted array and unsorted array (do in nlogn))
 	https://codeforces.com/contest/978/problem/A
-+ Maximum Element
-+ QuickSort
-* 	The Stern-Brocot Tree 
+* Dearrangements Generator
 * Determinant of a matrix
 	https://cs101.bodhi.cse.iitb.ac.in/assignments/details/939
-* Dearrangements Generator
-* FFT (polynomial multiplication)
++ QuickSort
 
 # Programming Expositions (Expository Problems)
 + ✓ Linear Feedback Shift Register - Pseudo Random Generator
 * ✓ Vignere Cipher (can do Perfect Faro Shuffle (Inner)) - Cryptogaphy
+* Generating Functions (some combinatorics)
+	https://youtu.be/VLbePGBOVeg
 * Iterated Function Systems (rand function)
 	Sierpinsky triangle,  Barnsley's Fractal Fern
 * Fourier Circles
@@ -199,12 +199,33 @@ Order of proference table
 * Automata Modeller - Computation
 * Brainfuck Compiler (short as cell size, dynamically size array) - Compilers
 
+
 # Classes
+* Lunar Arithmetic (Dismal Arithmetic)
+	https://youtu.be/cZkGeR9CWbk, https://en.wikipedia.org/wiki/Lunar_arithmetic
+	Addition 
+	Multiplication
+	Check Even 2 * n
+	Square n * n
+	Triangular numbers 1+2+..+n
+	Factorial
+* Infinite Precision Integer Arithmetic
+	https://cp-algorithms.com/algebra/big-integer.html
+	Addition
+	Multiplication using KaratSuba Algorithm
+	Division (Quotient and Reminder)
+* Fractional Arbitrary-Precision Arithmetic
+	https://cp-algorithms.com/algebra/big-integerhtml#fractional-arbitrary-precision-arithmetic
 + Polynomials
+	https://cp-algorithms.com/algebra/polynomial.html#basic-implementation
 + Linear Algebra (add Matrix Rotation)
 + Symbolic Computation aka Computer algebra
-	* Infinite Precision Arithmetic
 	* Fractions as numerators and denominators
+
+# STL
+* Maps cf ip address
+* FFT (polynomial multiplication using complex class)
+	https://cp-algorithms.com/algebra/fft.html#practice-problems
 
 # Project Demos
 * Tennis Scoreboard Simulator
@@ -225,5 +246,5 @@ Order of proference table
 - Backtracking
 
 ## Bitwise
-## STL
+
 CodeForces
