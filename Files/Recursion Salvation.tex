@@ -2,9 +2,9 @@
 \begin{topics}
 \verb!recursive functions! and previous sections.
 \end{topics}
-\paragraph{5 Simple Steps for Solving Any Recursive Problem}
+\subsection*{5 Simple Steps for Solving Any Recursive Problem}
 (Courtesy -- \href{https://youtu.be/ngCos392W4w}{Reducible})
-\begin{itemize}
+\begin{itemize}[noitemsep]
 	\item What's the simplest possible input?
 	\item Play around with examples and visualize!
 	\item Relate hard cases to simpler cases
@@ -78,8 +78,7 @@ If recursion was not allowed do you think it would be possible to solve this pro
 \KOMAoptions{paper=A3}
 \recalctypearea
 \subsection{Modular Exponentiation}
-Consider the problem of calculating $x^y\Mod k$ (i.e. the remainder when $x^y$ is divided by $k$).
-
+Consider the problem of calculating $x^y\Mod k$ (i.e. the remainder when $x^y$ is divided by $k$).\\
 A naive approach is to keep multiplying by $x$ (and take$\Mod k$) until we reach $x^y$.\footnote{this works because $(a\cdot b)\Mod m =  ((a\Mod m)\cdot(b\Mod m))\Mod m$}
 \begin{equation*}
 x \Mod k \rightarrow x^2 \Mod k \rightarrow x^3 \Mod k \rightarrow x^4 \Mod k \rightarrow \cdots \rightarrow x^y \Mod k
