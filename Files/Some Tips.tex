@@ -1,0 +1,63 @@
+\begin{center}
+	\textbf{\large{How to write a program? (5Cs)}}
+\end{center}
+\begin{itemize}
+\item Carefully go through the problem statement
+\item Check your understanding of problem using solved examples and practice testcases
+\item Compose the programming approach on paper
+\item Consolidate your approach by verifying its correctness on testcases by doing dry runs
+\item Code it up (finally!)
+\end{itemize}
+\begin{center}
+	\textbf{\large{Good Programming Practices}}
+\end{center}
+\begin{itemize}
+\item 
+Write documentation clearly explaining 
+	\begin{itemize}
+	\item what the program does,
+	\item how to use it,
+	\item what quantities it takes as input, and
+	\item what quantities it returns as output.
+	\end{itemize}
+\item
+Use appropriate variable/function names.
+\item 
+Extensive internal comments explaining how the program works.
+\item 
+Complete error handling with informative error messages.\\
+For example, if \verb!a = b = 0!, then the \verb!gcd(a, b)! routine should return the error message \\``\verb!gcd(0,0)! is undefined'' instead of going into an infinite loop or returning a ``division by zero'' error.
+\end{itemize}
+\begin{center}
+	\textbf{\large{Tips}}
+\end{center}
+\begin{itemize}
+\item Choose appropriate variable data types according to constraints. Example, if a variable is always an integer then it should be assigned an \verb!int! data type.
+\item Some data types that you should keep in mind are:
+	\begin{itemize}
+	\item \verb!bool!
+	\item \verb!char!
+	\item \verb!short int, int, long int, long long int! and their \verb!unsigned! counterparts
+	\item \verb!float, double, long double!
+	\end{itemize}
+\item Use \href{https://www.geeksforgeeks.org/type-conversion-in-c/}{type conversion} to your advantage to
+	\begin{itemize}
+	\item make your program unambiguous.
+	\item compute expressions containing variables of different data types.
+	\end{itemize}
+\item Find more tips at \url{https://paramrathour.github.io/CS101/tips}
+\end{itemize}
+\begin{center}
+	\textbf{\large{Get comfortable with Dry Runs}}
+\end{center}
+The most important step in debugging
+\begin{itemize}	
+\item Select a testcase
+\item Manually go through the code to trace the value of variables
+\item Check if the values of variables matches with their expected values
+\begin{itemize}
+	\item If they do not match for any variable at any time then your program is incorrect, consider debugging/rewriting it
+	\item If they match for all variables at all times, Hurray your program is correct for the current testcases!
+\end{itemize}
+\item Now repeat the procedure for a different testcase :)
+\end{itemize}
