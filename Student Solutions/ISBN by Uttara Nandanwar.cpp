@@ -25,7 +25,7 @@ main_program{
         if ((s + d * m) % 11 == 0)
             break;
     }
-    if (m == 0 && m == 9)
+    if (m >= 0 && m <= 9)
         cout << m;
     else if (m == 10)
         cout << "X";
