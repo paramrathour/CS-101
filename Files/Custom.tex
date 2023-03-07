@@ -1,5 +1,5 @@
 % \setcounter{section}{-1}
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{3}
 \renewcommand\familydefault{\sfdefault}
 \newcommand{\op}{\operatorname}
 \newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
@@ -7,10 +7,9 @@
 \newcommand{\Z}{\mathbb{Z}}
 \renewcommand{\d}{\, \mathrm{d}}
 
-\newenvironment{testcases}[6]{
-	\vspace{0.2em}
-	\begin{tcolorbox}[breakable, enhanced, sharpish corners]%, colback = white]
-	%colframe=red!75!black,colback=red!5!white
+\newenvironment{format}[4]{
+	\href{#4}{\textbf{Starter Code}}
+	\tcbline
 	\textbf{Input Format}\\
 	#1
 	\tcbline
@@ -20,13 +19,23 @@
 	\textbf{Constraints}\\
 	#3
 	\tcbline
+}
+
+\newenvironment{testcases}[6]{
+	\vspace{0.2em}
+	\begin{tcolorbox}[breakable, enhanced, sharpish corners]%, colback = white]
+	%colframe=red!75!black,colback=red!5!white
+	\begin{format}
+	{#1}
+	{#2}
+	{#3}
+	{#6}
+	\end{format}
 	\textbf{Sample Input}\\
 	#4
 	\tcbline
 	\textbf{Sample Output}\\
 	#5
-	\tcbline
-	\href{#6}{\textbf{Starter Code}}
 	\end{tcolorbox}
 	}
     {
@@ -37,15 +46,12 @@
 	\vspace{0.2em}
 	\begin{tcolorbox}[breakable, enhanced, sharpish corners]%, colback = white]
 	%colframe=red!75!black,colback=red!5!white
-	\textbf{Input Format}\\
-	#1
-	\tcbline
-	\textbf{Output Format}\\
-	#2
-	\tcbline
-	\textbf{Constraints}\\
-	#3
-	\tcbline
+	\begin{format}
+	{#1}
+	{#2}
+	{#3}
+	{#7}
+	\end{format}
 	\textbf{Function(s) to Implement}\\
 	#4
 	\tcbline
@@ -54,8 +60,6 @@
 	\tcbline
 	\textbf{Sample Output}\\
 	#6
-	\tcbline
-	\href{#7}{\textbf{Starter Code}}
 	\end{tcolorbox}
 	}
     {
@@ -65,15 +69,12 @@
 \newenvironment{testcasesMore}[8]{
 	\vspace{0.2em}
 	\begin{tcolorbox}[breakable, enhanced, sharpish corners]%, colback = white]
-	\textbf{Input Format}\\
-	#1
-	\tcbline
-	\textbf{Output Format}\\
-	#2
-	\tcbline
-	\textbf{Constraints}\\
-	#3
-	\tcbline
+	\begin{format}
+	{#1}
+	{#2}
+	{#3}
+	{#8}
+	\end{format}
 	\textbf{Sample Input}\\
 	#4
 	\tcbline
@@ -82,8 +83,6 @@
 	\tcbline
 	\textbf{More Test cases}\\
 	\href{#6}{Input} and \href{#7}{Output} files
-	\tcbline
-	\href{#8}{\textbf{Starter Code}}
 	\end{tcolorbox}
 	}
     {
@@ -94,15 +93,12 @@
 	\vspace{0.2em}
 	\begin{tcolorbox}[breakable, enhanced, sharpish corners]%, colback = white]
 	%colframe=red!75!black,colback=red!5!white
-	\textbf{Input Format}\\
-	#1
-	\tcbline
-	\textbf{Output Format}\\
-	#2
-	\tcbline
-	\textbf{Constraints}\\
-	#3
-	\tcbline
+	\begin{format}
+	{#1}
+	{#2}
+	{#3}
+	{#9}
+	\end{format}
 	\textbf{Function(s) to Implement}\\
 	#4
 	\tcbline
@@ -114,8 +110,6 @@
 	\tcbline
 	\textbf{More Test cases}\\
 	\href{#7}{Input} and \href{#8}{Output} files
-	\tcbline
-	\href{#9}{\textbf{Starter Code}}
 	\end{tcolorbox}
 	}
     {

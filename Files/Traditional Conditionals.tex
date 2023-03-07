@@ -102,40 +102,6 @@ Calculate the flower's height after $n$ days given information whether Fleur has
 % 	{1.00000\\4.00000\\2.00000\\1.58740\\1.41421\\8.00000\\32.00000\\12.00000\\9.84251\\9.25415\\14.67495}
 % 	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Lp norm.cpp}
 % \end{testcases}
-\subsection{ISBN}
-You may have wondered about the 10 (or 13) digits numbers on the back of every book. They are ISBN, which stands for International Standard Book Number and is used for uniquely identifying books and other publications (including e-publications). Go find the ISBN of your favourite book! :)\\
-Let us consider ISBN 10 (10 digit numbers), an old format that got replaced by ISBN 13.
-The first 9 digits contain information about the geographical region, publisher and edition of the title. The last digit is a check digit used for validating the number.
-Let the number be $x_1x_2x_3x_4x_5x_6x_7x_8x_9x_{10}$, then the check digit $x_{10}$ is chosen such that the checksum $= 10x_1 + 9x_2 + 8x_3 + 7x_4 + 6x_5 + 5x_6 + 4x_7 + 3x_8 + 2x_9 + 1x_{10}$ is a multiple of 11.
-This condition is succinctly represented as below:
-\begin{equation}
-{\displaystyle \left(\sum _{i=1}^{10}(11-i)x_{i} \right) \% 11 = 0}
-\end{equation}
-\subsubsection{Generation of check digit (example)}
-If the first nine digits are 812913572 then $8\times10 + 1\times9 + 2\times8 + 9\times7 + 1\times6 + 3\times5 + 5\times4 + 7\times3 + 2\times2 = 234$. So if $x_{10} = 8$, then the checksum is divisible by 11. Hence, the ISBN is 8129135728.
-\begin{note}
-It as possible that the calculated check digit is 10 as we can get any remainder from 0 to 10 when divided by 11. But when the remainder is 10, as is not a single digit, appending 10 to ISBN will make its length 11. To avoid such cases, the letter `X' is used to denote check digit = 10.
-\end{note}
-\textbf{Problem Statement:}\\
-Recover and output the missing digit from a given valid ISBN 10 code with a digit erased.\\
-The missing digit can be any $x_i$ $(1\leq i\leq 10)$.
-\begin{testcases}
-	{$t$ \hfill(number of test cases, an integer)\\
-	10 characters each either representing a digit (0-9) or a missing number (‘?’).\hfill(for each testcase)\\
-	The last character (check digit) can also be `X'.}
-	{A single digit, that is to be placed at `?' position to make the given ISBN valid.
- \hfill{(space seperated)}\\
-	If the missing integer is 10 then, the output should be `X'}
-	{It is always possible that a unique ISBN exists. (Why?)}
-	{9\\81291?5728\\30303935?7\\366205414?\\366?054140\\05?0764845\\?590764845\\?43935806X\\933290152?\\9332?0152X}
-	{3 7 0 2 9 0 0 X 9}
-	% {10\\81291?5728\\366205414?\\05907?4845\\0?90353403\\?43935806X\\303039357?\\02015?8025\\?201558025\\933290152?\\9332?0152X}
-	% {0\\6\\5\\0\\3\\7\\5\\0\\X\\9}
-	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/ISBN.cpp}
-\end{testcases}
-\begin{funvideo}
-\href{https://youtu.be/sPFWfAxIiwg}{11.11.11 -- Numberphile}
-\end{funvideo}
 \subsection{Doomsday Algorithm}
 The Doomsday Algorithm is a method for determining the day of the week for a given date. It  takes advantage of some easy-to-remember-dates called \emph{Doomsdates} falling on the same day called \emph{Doomsdays} for a given year.\\
 Eg., 3/1 (4/1 leap years), Last Day of Feb, 14/3 (Pi Day), 4/4, 6/6, 8/8, 10/10, 12/12, 9/5, 5/9, 11/7, 7/11.

@@ -1,7 +1,41 @@
+\KOMAoptions{paper=A4}
+\recalctypearea
+{\scriptsize
 \section{Array Leeway (2-D Arrays)}
 \begin{topics}
 2-D arrays, function \& arrays and previous sections.
 \end{topics}
+\subsection{Case Converter}
+\textbf{Problem Statement:}\\
+Convert a given text into different cases as mentioned below
+\begin{description}
+	\item[aLtErNaTiNg CaPs] Start with a lower case letter and then keep switching between upper case and lower case letters alternatingly.
+	\item[Capitalize Word] Capitalize the first letter of each word and convert all other letters of that word to lower case.
+	\item[lower case] Convert every alphabet to lower case.
+	\item[Sentence case] Capitalize the first letter of each sentence and convert all other letters of that sentence to lower case. A sentence only ends with a full stop (`.') .
+	\item[tOGGLE cASE] Uncapitalize the first letter of each word and convert all other letters of that word to upper case.
+	\item[UPPER CASE] Convert every alphabet to upper case.
+\end{description}
+\begin{note}
+	In all above cases, ignore non-alphabetic characters.
+\end{note}
+\begin{testcases}
+	{sentence\_length\quad x \hfill(x is either a/c/l/s/t/u denoting the case to convert to or e for all cases)\\
+	sentence\hfill(entire sentence in a line, the sentence\_length includes spaces)}
+	{The sentence converted into x case\hfill{(already taken care of in \href{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Case Converter.cpp}{Starter Code})}}
+	{$1 \leq \text{sentence\_length} \leq 10000$}
+	{479\quad e\\The Earth is a very small stage in a vast cosmic arena. Think of the endless cruelties visited by the inhabitants of one corner of this pixel on the scarcely distinguishable inhabitants of some other corner, how frequent their misunderstandings, how eager they are to kill one another, how fervent their hatreds. Think of the rivers of blood spilled by all those generals and emperors so that, in glory and triumph, they could become the momentary masters of a fraction of a dot.}
+	{tHe EaRtH iS a VeRy SmAlL sTaGe In A vAsT cOsMiC aReNa. ThInK oF tHe EnDlEsS cRuElTiEs ViSiTeD bY tHe InHaBiTaNtS oF oNe CoRnEr Of ThIs PiXeL oN tHe ScArCeLy DiStInGuIsHaBlE iNhAbItAnTs Of SoMe OtHeR cOrNeR, hOw FrEqUeNt ThEiR mIsUnDeRsTaNdInGs, HoW eAgEr ThEy ArE tO kIlL oNe AnOtHeR, hOw FeRvEnT tHeIr HaTrEdS. tHiNk Of ThE rIvErS oF bLoOd SpIlLeD bY aLl ThOsE gEnErAlS aNd EmPeRoRs So ThAt, In GlOrY aNd TrIuMpH, tHeY cOuLd BeCoMe ThE mOmEnTaRy MaStErS oF a FrAcTiOn Of A dOt.\\\\
+The Earth Is A Very Small Stage In A Vast Cosmic Arena. Think Of The Endless Cruelties Visited By The Inhabitants Of One Corner Of This Pixel On The Scarcely Distinguishable Inhabitants Of Some Other Corner, How Frequent Their Misunderstandings, How Eager They Are To Kill One Another, How Fervent Their Hatreds. Think Of The Rivers Of Blood Spilled By All Those Generals And Emperors So That, In Glory And Triumph, They Could Become The Momentary Masters Of A Fraction Of A Dot.\\\\
+the earth is a very small stage in a vast cosmic arena. think of the endless cruelties visited by the inhabitants of one corner of this pixel on the scarcely distinguishable inhabitants of some other corner, how frequent their misunderstandings, how eager they are to kill one another, how fervent their hatreds. think of the rivers of blood spilled by all those generals and emperors so that, in glory and triumph, they could become the momentary masters of a fraction of a dot.\\\\
+The earth is a very small stage in a vast cosmic arena. Think of the endless cruelties visited by the inhabitants of one corner of this pixel on the scarcely distinguishable inhabitants of some other corner, how frequent their misunderstandings, how eager they are to kill one another, how fervent their hatreds. Think of the rivers of blood spilled by all those generals and emperors so that, in glory and triumph, they could become the momentary masters of a fraction of a dot.\\\\
+tHE eARTH iS a vERY sMALL sTAGE iN a vAST cOSMIC aRENA. tHINK oF tHE eNDLESS cRUELTIES vISITED bY tHE iNHABITANTS oF oNE cORNER oF tHIS pIXEL oN tHE sCARCELY dISTINGUISHABLE iNHABITANTS oF sOME oTHER cORNER, hOW fREQUENT tHEIR mISUNDERSTANDINGS, hOW eAGER tHEY aRE tO kILL oNE aNOTHER, hOW fERVENT tHEIR hATREDS. tHINK oF tHE rIVERS oF bLOOD sPILLED bY aLL tHOSE gENERALS aND eMPERORS sO tHAT, iN gLORY aND tRIUMPH, tHEY cOULD bECOME tHE mOMENTARY mASTERS oF a fRACTION oF a dOT.\\\\
+THE EARTH IS A VERY SMALL STAGE IN A VAST COSMIC ARENA. THINK OF THE ENDLESS CRUELTIES VISITED BY THE INHABITANTS OF ONE CORNER OF THIS PIXEL ON THE SCARCELY DISTINGUISHABLE INHABITANTS OF SOME OTHER CORNER, HOW FREQUENT THEIR MISUNDERSTANDINGS, HOW EAGER THEY ARE TO KILL ONE ANOTHER, HOW FERVENT THEIR HATREDS. THINK OF THE RIVERS OF BLOOD SPILLED BY ALL THOSE GENERALS AND EMPERORS SO THAT, IN GLORY AND TRIUMPH, THEY COULD BECOME THE MOMENTARY MASTERS OF A FRACTION OF A DOT.}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Case Converter.cpp}
+\end{testcases}
+}
+\KOMAoptions{paper=A4}
+\recalctypearea
 \subsection{Spiral Grid}
 \textbf{Problem Statement:}\\
 Generate a grid containing numbers from $1$ to $n^2$ such that $1$ is at center and then the numbers spiral outwards from $1$ in counterclockwise direction. Also, make sure each element of grid is equally spaced as shown in \ref{fig:spiralgrid}.
