@@ -7,6 +7,12 @@
 \newcommand{\Z}{\mathbb{Z}}
 \renewcommand{\d}{\, \mathrm{d}}
 
+\renewcommand\epigraphflush{flushleft}
+% \renewcommand\epigraphsize{\normalsize}
+% \renewcommand{\textflush}{flushepinormal}
+\setlength\epigraphwidth{2\linewidth}
+\pretocmd{\epigraph}{\par\vspace{-1em}}{}{}
+
 \newenvironment{format}[4]{
 	\href{#4}{\textbf{Starter Code}}
 	\tcbline
