@@ -76,15 +76,12 @@ void formatter(char result[], int length, char format) {
 int main() {
 	const int LENGTH_MAX = 1e5;
 	char text[LENGTH_MAX], result[LENGTH_MAX], format;
-	int total_test_cases, length = 0;
-	cin >> total_test_cases;
-	for (int test_case = 0; test_case < total_test_cases; ++test_case) {
-		cin >> length >> format >> ws;
-		cin.getline(text, length + 1);
-		for (int i = 0; i < length; ++i) {
-			result[i] = text[i];
-		}
-		formatter(result, length, format);
+	int length = 0;
+	cin >> length >> format >> ws;
+	cin.getline(text, length + 1);
+	for (int i = 0; i < length; ++i) {
+		result[i] = text[i];
 	}
+	formatter(result, length, format);
 	return 0;
 }
