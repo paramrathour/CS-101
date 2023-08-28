@@ -1,0 +1,22 @@
+\subsection{Viète's $\pi$ Formula}{\label{pp:vietesformula}}
+This problem is a fusion of \ref{pp:wallis} and \ref{pp:ramanujanradical}. It is recommended to solve them before proceeding to this problem.
+\begin{equation}
+{ {\frac {2}{\pi }}={\frac {\sqrt {2}}{2}}\cdot {\frac {\sqrt {2+{\sqrt {2}}}}{2}}\cdot {\frac {\sqrt {2+{\sqrt {2+{\sqrt {2}}}}}}{2}}\cdots = \prod_{i = 1}^{\infty} \frac{\overbrace{\sqrt{2+\sqrt{\cdots{\sqrt{2+{\sqrt{2+\sqrt{2+0}}}}}}}}^{i\ 2\text{'s}}}{2}}
+	\end{equation}
+Let's define $\pi_n$ as $n$-th iteration of this infinite nested radical as below
+\begin{equation*}
+\frac{2}{\pi_n} = \prod_{i = 1}^{n} \frac{\overbrace{\sqrt{2+\sqrt{\cdots{\sqrt{2+{\sqrt{2+\sqrt{2+0}}}}}}}}^{i\ 2\text{'s}}}{2}
+\end{equation*}
+\textbf{Problem Statement:}\\
+Calculate $\pi_n$ for all test cases accurate till 15 decimal places. See Starter code (below) for more details.
+\begin{testcases}
+	{$t$ \hfill(number of test cases, an integer)\\$n_1\ n_2\ \ldots\ n_t$ \hfill($t$ space seperated integers for each testcase)}
+	{$\pi_{n_i}$ \hfill(each test case on a newline, accurate till 15 decimal places)}
+	{$1 \leq n_i \leq 50$}
+	{8\\1 2 3 5 10 20 30 50}
+	{2.828427124746190\\3.061467458920718\\3.121445152258052\\3.140331156954753\\3.141591421511200\\3.141592653588618\\3.141592653589793\\3.141592653589793}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Viete's pi Formula.cpp}
+\end{testcases}
+\begin{funvideo}
+\href{https://youtu.be/gMlf1ELvRzc}{The Discovery That Transformed Pi -- Veritasium}
+\end{funvideo}

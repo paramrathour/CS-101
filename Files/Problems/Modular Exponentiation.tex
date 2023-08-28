@@ -1,0 +1,61 @@
+\KOMAoptions{paper=A3}
+\recalctypearea
+\subsection{Modular Exponentiation}
+Consider the problem of calculating $x^y\Mod k$ (i.e. the remainder when $x^y$ is divided by $k$).\\
+A naive approach is to keep multiplying by $x$ (and take$\Mod k$) until we reach $x^y$.\footnote{this works because $(a\cdot b)\Mod m =  ((a\Mod m)\cdot(b\Mod m))\Mod m$}
+\begin{equation*}
+x \Mod k \rightarrow x^2 \Mod k \rightarrow x^3 \Mod k \rightarrow x^4 \Mod k \rightarrow \cdots \rightarrow x^y \Mod k
+\end{equation*}
+We can use a much faster method which involves \emph{repeated squaring} of $x \Mod k$
+\begin{equation}
+x \Mod k \rightarrow x^2 \Mod k \rightarrow x^4 \Mod k \rightarrow x^8 \Mod k \rightarrow \cdots \rightarrow x^{2^{\lfloor\log y\rfloor}} \Mod k
+\end{equation}
+The idea is to multiply some of the above numbers and get $x^y \Mod k$.\\
+This is achieved by choosing all powers that have 1 in binary representation of $y$.\\
+For example,
+\begin{equation*}
+x^{25} = x ^ {11001_2} = x ^ {10000_2} \cdot x ^ {1000_2} \cdot x ^ {1_2} = x ^ {16} \cdot x ^ 8 \cdot x ^ 1
+\end{equation*}
+which gives,
+\begin{equation*}
+x^{25} \Mod k  = ((x ^ {16} \Mod k)\cdot (x ^ 8\Mod k)  \cdot (x ^ 1\Mod k)) \Mod k
+\end{equation*}
+\begin{enumerate}[label=(\alph*)]
+\item 
+\textbf{Problem Statement:}\\
+Calculate $x^y\Mod k$ using the above method for $n$ $(x,y,k)$ triples. Take $k=10^9+7$. \href{https://www.geeksforgeeks.org/modulo-1097-1000000007/}{why this number?}
+\begin{testcasesFunction}
+	{$t$ \hfill(number of test cases, an integer)\\
+	$x_1\ y_1\ \quad x_2\ y_2\ \quad \ldots\quad x_t\ y_t$ \hfill($t$ space seperated integer pairs for each testcase)}
+	{$x_i^{y_i} \Mod k$ \hfill(each test case on a newline)}
+	{$1 < x_i,\ y_i \leq 10^{9}$}
+	{\texttt{int mod\_exp(int x, int y, int k)} -- returns $x^y \Mod k$}
+	{5\\3 4\quad2 8\quad123 123\quad129612095 411099530\quad241615980 487174929}
+	{81\\256\\921450052\\276067146\\838400234}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Modular Exponentiation I.cpp}
+\end{testcasesFunction}
+\begin{note}
+	Before proceeding to next task, verify your program on more testcases from \href{https://cses.fi/problemset/task/1095}{here}.
+\end{note}
+\item 
+\textbf{Problem Statement:}\\
+Calculate $x^y\Mod k$ using the above method for $n$ $(x,y,k)$ triples. Take $k=10^9+7$. \href{https://www.geeksforgeeks.org/modulo-1097-1000000007/}{why this number?}
+\begin{testcasesFunction}
+	{$t$ \hfill(number of test cases, an integer)\\
+	$x_1\ y_1\ z_1\ \quad x_2\ y_2\ z_2\ \quad \ldots\quad x_t\ y_t z_t\ $ \hfill($t$ space seperated triples for each testcase)}
+	{$x_i^{y_{i}^{z_i}} \Mod k$ \hfill(each test case on a newline)}
+	{$1 < x_i,\ y_i,\ z_i \leq 10^{9}$}
+	{\texttt{int mod\_super\_exp(int x, int y, int z, int k)} -- returns $x^{y^z} \Mod k$}
+	{5\\3 7 1\quad15 2 2\quad3 4 5\quad427077162 725488735 969284582\quad690776228 346821890 923815306}
+	{2187\\50625\\763327764\\464425025\\534369328}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Modular Exponentiation II.cpp}
+\end{testcasesFunction}
+\begin{note}
+	Verify your program on more testcases from \href{https://cses.fi/problemset/task/1712}{here}.
+\end{note}
+\end{enumerate}
+\begin{funvideo}
+\href{https://youtu.be/cbGB__V8MNk}{Square \& Multiply Algorithm - Computerphile}
+\end{funvideo}
+\KOMAoptions{paper=A4}
+\recalctypearea

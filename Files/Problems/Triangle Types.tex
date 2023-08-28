@@ -1,0 +1,25 @@
+\subsection{Triangle Types}{\label{pp:triangletypes}}
+Triangles can be classified using sides and angles as follows:
+\subsubsection{By Side}
+\begin{description}
+\item[Scalene] All sides different
+\item[Isosceles] Any two sides equal
+\item[Equilateral] All sides equal
+\end{description}
+\subsubsection{By Angle}
+\begin{description}
+\item[Acute] All angles $< 90$\textdegree
+\item[Right] One angle $= 90$\textdegree
+\item[Obtuse] One angle $> 90$\textdegree
+\end{description}
+\textbf{Problem Statement:}\\
+Given the three sides of the triangle $a,b,c$, output the type of triangle by side and angle. Also check the validity of given sides i.e., output ``NOT A TRIANGLE'' if the given sides does not form a triangle.
+\begin{testcases}
+	{$t$ \hfill(number of test cases, an integer)\\
+	$a_{i}\ b_{i}\ c_{i}$ \hfill(three space seperated integers for each testcase)}
+	{Type by side \& Type by angle \hfill{(each test case on a newline)}}
+	{$1 \leq a,b,c \leq 100$}
+	{7\\1 2 3\\3 4 2\\5 3 4\\4 5 6\\3 3 2\\5 3 3\\3 3 3}
+	{NOT A TRIANGLE\\Scalene \& Obtuse\\Scalene \& Right\\Scalene \& Acute\\Isosceles \&\ Acute\\Isosceles \& Obtuse\\Equilateral \& Acute}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Triangle Type.cpp}
+\end{testcases}

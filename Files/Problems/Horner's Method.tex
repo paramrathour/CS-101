@@ -1,0 +1,37 @@
+\subsection{Horner's Method}
+{\small Consider, the problem of evaluating a polynomial given its coefficients.
+\begin{equation*}
+	f(x)=a_{0}+a_{1}\cdot x+a_{2}\cdot x^{2}+a_{3}\cdot x^{3}+\cdots +a_{n}\cdot x^{n}
+\end{equation*}
+A naive method is to evaluate $x^0, x^1, x^2, \ldots, x^n$ independently, then multiply $x^i$ with $a_i$ and add all results.
+\begin{equation*}
+	f(x)=a_{0}+a_{1}\cdot x+a_{2}\cdot x\cdot x+a_{3}\cdot x\cdot x\cdot x+\cdots +a_{n}\underbrace{x\cdot x\cdots x}_{n\text{ times}}
+\end{equation*}
+This approach takes $1+2+\cdots+n=n(n+1)/2$ multiplications and $n$ additions.\\
+It can be improved by using the precalculated $x^{i-1}$ and multiplying it by $x$ to get $x^{i}$. This reduces the number of multiplications significantly to $2n-1$ while keeping the number of additions $n$.
+\begin{equation*}
+	f(x)=a_{0}+a_{1}\cdot x^0\cdot x+a_{2}\cdot x^1\cdot x+a_{3}\cdot x^2\cdot x+\cdots +a_{n}x^{n-1}\cdot x
+\end{equation*}
+But surprisingly there is an even better way! Horner's Method as described in \ref{eq:horner}, is an optimal algorithm for polynomial evaluation needing only $n$ multiplications and $n$ additions.
+\begin{equation}{\label{eq:horner}}
+	f(x)=a_{0}+x\bigg(a_{1}+x\Big(a_{2}+x\big(a_{3}+\cdots +x(a_{n-1}+x\,a_{n})\cdots \big)\Big)\bigg)
+\end{equation}
+\textbf{Problem Statement:}\\
+Evaluate polynomial given by coefficients at $x$ using Horner's Method for all test cases.
+\begin{testcasesFunction}
+	{$t$ \hfill(number of test cases, an integer)\\
+	$x_i\qquad n_i \quad a_0\ a_1\ a_2 \cdots a_{n_i}$ \hfill($n_i+3$ space seperated integers for each testcase)}
+	{$f(x_i)$\hfill(each on a newline)}
+	{$1 < x_i,\ n_i, a_i \leq 10^{4}$\\
+	Also assume that the calculations are always within the range of long long}
+	{\texttt{long long f(const int \&x, int a, int b)} -- returns $f(x)$, you are also given two extra parameters.}
+	{6\\1\qquad 0\quad 1\\2\qquad 1\quad -3 2\\2\qquad 2\quad 15 -8 7\\3\qquad 3\quad 2 -1 -3 4\\5\qquad 6\quad 21 10 19 47 48 9 27\\3\qquad 14\quad -1 59 265 -35 8 -97 -932 38 4 -62 -643 38 -3 27 950}
+	{1\\1\\27\\80\\486421\\4552224296}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Horner's Method.cpp}
+\end{testcasesFunction}
+\begin{noteI}
+If recursion was not allowed do you think it would be possible to solve this problem given it's input order was ($a_0\ a_1\ a_2 \cdots a_{n_i}$)? Problem \ref{pp:simplecontinuedfractions} had inputs in reverse order $a_{n_i}\ a_{n_{i-1}}\ \ldots\ a_1\ a_0$. By taking inspiration from recursion, solve it when the inputs are in correct order ($a_0\ a_1\ a_2 \cdots a_{n_i}$).
+\end{noteI}
+\begin{funvideo}
+\href{https://youtu.be/cUzklzVXJwo}{How Imaginary Numbers Were Invented -- Veritasium}
+\end{funvideo}}

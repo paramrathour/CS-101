@@ -1,0 +1,29 @@
+\subsection{Josephus Problem}
+Suppose there are $n$ terrorists around a circle facing towards the centre. They are numbered $1$ to $n$ along clockwise direction. Initially, terrorist 1 has the sword. Now, the terrorist with sword kills the $k$\textsuperscript{th} nearest alive terrorist to its left and passes the sword to $(k+1)$\textsuperscript{st} nearest alive terrorist to its left. The process repeats. Basically, every $k$\textsuperscript{th} terrorist is killed until only one survives. Then the last terrorist is killed.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.15\linewidth]{Josephus.pdf}
+    \caption{Example arrangement of 10 terrorists}
+    \label{fig:jp}
+\end{figure}
+\vspace{-1.5em}
+For example, in the above arrangement,\\
+when $k=1,$ 1 kills 2, 3 kills 4, 5 kills 6, 7 kills 8, 9 kills 10, 1 kills 3, 5 kills 7, 9 kills 1 and 5 kills 9. So, 5 survives;\\% and is killed last;\\
+when $k=2,$ 1 kills 3, 4 kills 6, 7 kills 9, 10 kills 2, 4 kills 7, 8 kills 1, 4 kills 8, 10 kills 5 and 4 kills 10. So, 4 survives.\\% and is killed last.
+\textbf{Problem Statement:}\\
+For a given $n, k$ pair, and starting position $1$, print the terrorists in the sequence they are killed.
+\begin{testcases}
+	{$t$ \hfill(number of test cases, an integer)\\
+	$n_1\ k_1\ \quad n_2\ k_2\ \quad \ldots\quad n_t\ k_t$ \hfill($t$ space seperated pairs (number of terrorists $n$ and $k$) for each testcase)}
+	{Terrorists in the sequence they are killed \hfill(each test case on a newline)}
+	{$1 \leq k_i \leq n_i \leq 100$}
+	{9\\1 1\quad2 1\quad4 1\quad4 2\quad8 1\quad8 3\quad10 2\quad16 7\quad50 25}
+	{1\\2 1\\2 4 3 1\\3 2 4 1\\2 4 6 8 3 7 5 1\\4 8 5 2 1 3 7 6\\3 6 9 2 7 1 8 5 10 4\\8 16 9 2 12 6 3 15 14 1 5 11 10 4 13 7\\26 2 29 6 34 12 41 20 50 32 14 46 30 15 49 37 23 11 3 43 36 28 24 21 19 22 27 35 42 1 10 33 4 25 7 44 38 31 40 5 18 16 39 9 17 45 48 13 8 47}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Josephus Problem.cpp}
+\end{testcases}
+\begin{note}
+	Verify your program on even more testcases from \href{https://cses.fi/problemset/task/2163/}{here}.
+\end{note}
+\begin{funvideo}
+	\href{https://youtu.be/uCsD3ZGzMgE}{The Josephus Problem -- Numberphile}
+\end{funvideo}

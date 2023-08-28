@@ -1,0 +1,21 @@
+\subsection{Tetration}{\label{pp:tetration}}
+Problem \ref{pp:harmonic} is about repeated additions whereas \ref{pp:wallis} is about repeated multiplication. Guess what's this problem about. Yes! It's repeated exponentiation. Tetration, the next \href{https://en.wikipedia.org/wiki/Hyperoperation}{hyperoperation} after exponentiation defined as:%. It is defined as repeated exponentiation
+\begin{equation}
+{^{n}a}=\underbrace {a^{a^{\cdot ^{\cdot ^{a}}}}} _{n} \quad\text{repeated exponentiation}
+\end{equation}
+\textbf{Problem Statement:}\\
+Calculate ${^{n}a}$ for all test cases accurate till 10 decimal places. See Starter code (below) for more details.
+\begin{testcases}
+	{$t$ \hfill(number of test cases, an integer)\\
+	$a_1\ n_1\quad a_2\ n_2\quad \ldots\quad a_t\ n_t$ \hfill($t$ space seperated pairs for each testcase)}
+	{${^{n}a}$ \hfill(each test case on a newline, accurate till 10 decimal places)}
+	{$0.05 \leq a_i \leq 3$\hfill(a double)\\
+	$1 \leq n_i \leq 1000$ \hfill(an integer)}
+	{10\\1 1\quad1 2\quad2 1\quad2 2\quad2 3\quad3 2\quad3 3\quad1.41421356237 20\quad0.06598803584 1000 \quad	1.44466786101 1000}
+	{1.0000000000\\1.0000000000\\2.0000000000\\4.0000000000\\16.0000000000\\27.0000000000\\7625597484987.0000000000\\1.9995856229\\0.3968311347\\2.7128728643}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Tetration.cpp}
+\end{testcases}
+\begin{funvideo}
+\href{https://youtu.be/0poh3w_Vm_A}{Tetration: The operation you were (probably) never taught -- Taylor Series}
+\\\href{https://youtu.be/DmP3sFIZ0XE}{``Prove'' 4 = 2 Using Infinite Exponents. Can You Spot The Mistake? -- Mind Your Decisions}
+\end{funvideo}

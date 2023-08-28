@@ -1,0 +1,31 @@
+\subsection{Simple Continued Fractions}{\label{pp:simplecontinuedfractions}}
+{A (finite) simple continued fraction of a rational number $r$ is defined using $n+1$ coefficients = $[a_0; a_1, a_2,\ldots, a_{n-1}, a_n]$.
+% \begin{equation}
+% { r=a_{0}+{\cfrac {1}{a_{1}+{\cfrac {1}{a_{2}+{\cfrac {1}{a_{3}+{_{\ddots }}}}}}}}}
+% \end{equation}
+% Let's define $r_n$ as $n$-th iteration of this infinite continued fraction as below
+\\They can be expressed in \href{https://en.wikipedia.org/wiki/Generalized_continued_fraction#Notation}{Gauss' Kettenbruch notation} as follows
+\begin{equation}
+{ r=a_{0}+{\underset {i=1}{\overset {n }{\mathrm {K} }}}{\frac {1}{a_{n}}}\triangleq a_{0}+{\cfrac {1}{a_{1}+{\cfrac {1}{a_{2}+{\cfrac {1}{\ddots{+{\cfrac{1}{a_n} }}}}}}}} }
+\end{equation}
+\textbf{Problem Statement:}\\
+Express $r$ as a quotient $p/q$ where $p,q$ are integers and $q\neq0$. See Starter code (below) for more details.
+\begin{testcases}
+	{$t$ \hfill(number of test cases, an integer)\\%This is followed by $t$ test cases (each testcase takes two lines)\\
+	$n_i\quad a_{n_i}\ a_{n_{i-1}}\ \ldots\ a_1\ a_0$ \hfill($n_i+2$ space seperated integers for each testcase)}
+	{$p_{n_i}/q_{n_i}$ \hfill(each test case on a newline, where $r_{n_i} = p_{n_i}/q_{n_i}$ (in irreducible form))
+	% If $q_{n_i}=1$, output only $p_{n_i}$
+	}
+	{$0 \leq n_i \leq 50$\\
+	$a_{0}$ is an integer whereas $a_1, a_2, \ldots, a_{n_i -1}, a_{n_i}$ are positive integers\\
+	$a_0, a_1, a_2, \ldots, a_{n_i -1}, a_{n_i}$ are such that $-2,147,483,648\leq p_{n_i},q_{n_i}\leq2,147,483,647$\hfill(C++'s \texttt{int} range)% \hfill(i.e., $p_{n_i},q_{n_i}$ are within the range of C++'s int data type)
+	}
+	% $\leq a_{n_i} \leq$}
+	{11\\0 0\\1 1 0\\1 1 1\\1 7 3\\8 1 1 1 1 1 1 1 1 1\\10 1 1 1 1 1 1 1 1 1 2 -2\\3 1 15 7 3\\9 13 3 4 1 2 1 2 1 1 0\\12 14 1 3 1 2 1 1 1 292 1 15 7 3\\22 1 1 14 1 1 12 1 1 10 1 1 8 1 1 6 1 1 4 1 1 2 1 2\\45 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0}
+	{0/1\\1/1\\2/1\\22/7\\55/34\\-233/144\\355/113\\3035/5258\\80143857/25510582\\848456353/312129649\\1134903170/1836311903}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Simple Continued Fractions.cpp}
+\end{testcases}
+\begin{funvideo}
+\href{https://youtu.be/CaasbfdJdJg}{Infinite fractions and the most irrational number -- Mathologer}
+\end{funvideo}
+}

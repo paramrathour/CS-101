@@ -1,0 +1,42 @@
+\subsection{Collatz Conjecture}
+Consider the following operation on an arbitrary positive integer:
+\begin{itemize}
+	\item If the number is even, divide it by two.
+	\item If the number is odd, triple it and add one.
+\end{itemize}
+This operation can be defined using the function $f$ as follows:
+\begin{equation}
+f(n) = \begin{cases}
+	n/2 & \text{if $n$ is even}\\
+	3n+1 & \text{if $n$ is odd}
+\end{cases}
+\end{equation}
+Also note that the function updates $n$ itself.\\
+Let $\{a_i\}$ be the sequence of values $n$ acquires by applying $f$ repeatedly.\\
+Collatz conjecture states that for every positive integer this procedure will eventually reach 1.\\
+For example, if initial value of $n=3$, 1 is reached in seven operations .
+\begin{equation*}
+3\xrightarrow[(1)]{3\times3+1}10\xrightarrow[(2)]{10/2}5\xrightarrow[(3)]{3\times5+1}16\xrightarrow[(4)]{16/2}8\xrightarrow[(5)]{8/2}4\xrightarrow[(6)]{4/2}2\xrightarrow[(7)]{2/2}1
+\end{equation*}
+% For example, if $n=3$, then the sequence will be $10\(3\times3+1),\ 5\(10/2), 16\(3\times5+1), 8\(16/2\), 4\(8/2\), 2\(4/2\), 1\(2/2\)$. Total 7 operations.
+% \begin{equation}
+% 	a_i = \begin{cases}
+% 	f(a_{i-1}) & i > 0\\
+% 	n & i = 0
+% \end{cases}
+% \end{equation}
+\textbf{Problem Statement:}\\
+Your task is to return the number of operations required to reach 1\footnote{As of 2020, the conjecture has been checked by computer for all starting values up to $2^{68} \approx 2.95 \times 10^{20}$, so sequence from $n$ will reach 1 for the given constraints.} for arbitrary number of inputs.
+\begin{testcasesFunction}
+	{$n_1\ n_2\ \ldots n_i\ \ldots -1$\hfill(space separated arbitrary number of testcases, stop when input is negative)}
+	{number of operations required to reach 1 with initial value of $n = n_i$ \hfill(space seperated for each test case)}
+	{$1 \leq n_i \leq 10^{6}$}
+	{\texttt{void f(long long \&n)} -- updates value of $n$\\
+	\texttt{int count\_operations(long long n)} -- returns the number of operations required to reach 1}
+	{1 3 7 9 27 255 871 4255 77031 665215 837799 -1}
+	{0\quad7\quad16\quad19\quad111\quad47\quad178\quad201\quad350\quad441\quad524}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Collatz Conjecture.cpp}
+\end{testcasesFunction}
+\begin{funvideo}
+\href{https://youtu.be/094y1Z2wpJg}{Collatz Conjecture: The Simplest Math Problem No One Can Solve -- Veritasium}
+\end{funvideo}

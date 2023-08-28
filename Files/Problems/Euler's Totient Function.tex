@@ -1,0 +1,27 @@
+\subsection{Euler's Totient Function}\label{pp:eulertotient}
+Euler's totient function $\varphi(n)$ is the number of positive integers $\leq n$ that are co-prime to $n$.\\
+A simple apporach to calculating this function is to count the integers $i$'s such that $1\leq i\leq n$ and $\gcd(i,n) = 1$.\\
+But there is a \emph{better} way using the Euler's Product Formula
+\begin{equation}
+	\varphi (n)=n\prod _{p\mid n}\left(1-{\frac {1}{p}}\right)\qquad\text{For all primes $p\leq n$}
+\end{equation}
+So, if  ${\displaystyle n=p_{1}^{k_{1}}p_{2}^{k_{2}}\cdots p_{r}^{k_{r}}}$, where ${\displaystyle p_{1},p_{2},\ldots ,p_{r}}$ are the distinct primes dividing $n$
+% \begin{equation}
+% 	{\displaystyle \varphi (n)=n(p_{1}{-}1)\,(p_{2}{-}1)\cdots (p_{r}{-}1)}
+% \end{equation}
+\begin{equation*}
+	{\displaystyle \varphi (n)=p_{1}^{k_{1}-1}(p_{1}{-}1)\,p_{2}^{k_{2}-1}(p_{2}{-}1)\cdots p_{r}^{k_{r}-1}(p_{r}{-}1)}
+\end{equation*}
+\textbf{Problem Statement:}\\
+Calculate $\varphi(n)$ for a given $n$
+
+\begin{testcasesFunction}
+	{$t$ \hfill(number of test cases, an integer)\\
+	$n_1\ n_2\ \ldots\ n_t$ \hfill($t$ space seperated integers for each testcase)}
+	{$\varphi(n_i)$ \hfill(each test case on a newline)}
+	{$1 < n_i \leq 10^{9}$}
+	{\texttt{int totient(int n)} -- returns $\varphi(n)$}
+	{13\\1 4 8 20 44 69 97 120 2520 55440 277200 720720 88888888}
+	{1\\2\\4\\8\\20\\44\\96\\32\\576\\11520\\57600\\138240\\12690687}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Euler's Totient Function.cpp}
+\end{testcasesFunction}

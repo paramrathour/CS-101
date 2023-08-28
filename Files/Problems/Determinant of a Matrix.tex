@@ -1,0 +1,20 @@
+\subsection{Determinant of a Matrix}
+For a matrix $A\in \Z^{n\times n}$ (zero-based indexing) and for a $i\in\{0,1,\ldots,n-1\}$, the determinant of $A$ ($\op{det}(A)$) is
+\begin{equation}
+% A={\begin{bmatrix}a_{0,0}&a_{0,1}&\cdots &a_{0,n-1}\\a_{1,0}&a_{1,1}&\cdots &a_{1,n-1}\\\vdots &\vdots &\ddots &\vdots \\a_{n-1,0}&a_{n-1,1}&\cdots &a_{n-1,n-1}\end{bmatrix}} \quad \text{ and } \quad 
+\det(A)=\sum _{j=0}^{n-1}(-1)^{i+j}a_{ij}M_{ij}%\footnote{This is the popular Laplace Expansion.}
+\quad \text{ $M_{ij}$ is the $\op{det}$ of the matrix obtained by removing the $i$\textsuperscript{th} row and $j$\textsuperscript{th} column of $A$.}%$(n-1) \times (n-1)$ 
+\end{equation}
+\textbf{Problem Statement:}\\
+Find the determinant of given matrix $A$ using the above formula (called as Laplace Expansion).
+\begin{testcases}
+	{$t$ \hfill(number of test cases, an integer)\\$n_i$\hfill(size of matrix $A$)\\$a_{0,0}\quad a_{0,1}\quad \ldots \quad\ a_{0,n_i-1}$\quad\hfill(0\textsuperscript{th} row of matrix)\\$a_{1,0}\quad a_{1,1}\quad \ldots \quad\ a_{1,n_i-1}$\quad \hfill(1\textsuperscript{th} row of matrix)\\$\cdots$\\$a_{n_i-1,0}\quad a_{n_i-1,1}\quad \ldots \quad\ a_{n_i-1,n_i-1}$\hfill($(n_i-1)$\textsuperscript{th} row of matrix)}
+	{$\op{det}(A)$\hfill(space seperated integers for each test case)}
+	{$1\leq n_i \leq 10, -1000\leq a_{i,j}\leq 1000$\hfill(integers)}
+	{5\\1\\7\\2\\4 3\\1 2\\3\\5 4 3\\6 1 2\\7 8 9\\4\\1 1 1 1\\1 3 9 27\\1 6 36 216\\1 10 100 1000\\5\\4 -1 -1 -1 -1\\-1 2 -1 0 0\\-1 -1 2 0 0 \\-1 0 0 2 -1\\-1 0 0 -1 3}
+	{7\quad5\quad-72\quad7560\quad9}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Determinant.cpp}
+\end{testcases}
+\begin{funvideo}
+	\href{https://youtu.be/Cov_kLatdlc}{The Vandermonde Matrix and Polynomial Interpolation -- Dr. Will Wood}
+\end{funvideo}

@@ -1,0 +1,32 @@
+\subsection{Doomsday Algorithm}
+The Doomsday Algorithm is a method for determining the day of the week for a given date. It  takes advantage of some easy-to-remember-dates called \emph{Doomsdates} falling on the same day called \emph{Doomsdays} for a given year.\\
+Eg., 3/1 (4/1 leap years), Last Day of Feb, 14/3 (Pi Day), 4/4, 6/6, 8/8, 10/10, 12/12, 9/5, 5/9, 11/7, 7/11.
+% \subsubsection{The Algorithm}
+
+Watch the \href{https://youtu.be/z2x3SSBVGJU}{Fun Video} or go through the \href{https://en.wikipedia.org/wiki/Doomsday_rule}{Wikipedia Article} to understand the approach. In short the steps are:
+\begin{itemize}
+\item Find the anchor day for the century.
+\item Calculate the anchor day for the year (according to the century).
+\item Select the date (\emph{Doomsdate}) of the given month that falls on doomsday (according to the year).
+\item Count days between the \emph{Doomsdate} and given date which gives the answer.
+\end{itemize}
+\textbf{Problem Statement:}\\
+Write a function that calculates the day of the week for any particular date in the past or future.\\
+Consider Gregorian calendar (AD)
+\begin{testcasesMore}
+	{$t$ \hfill(number of test cases, an integer)\\
+	DD/MM/YYYY (Date Month Year)\hfill(three slash seperated integers for each testcase)}
+	{Day of the Week
+ \hfill{(each test case on a newline)}}
+	{$1 \leq$ Date $\leq 99$, $1 \leq$ Month $\leq 99$, $1 \leq$ Year $\leq 9999$ \hfill(integers)}
+	{8\\01/01/0001\\19/02/1627\\29/02/1700\\15/04/1707\\22/12/1887\\23/06/1912\\01/01/2000\\15/03/2020}
+	{Monday\\Friday\\INVALID DATE!\\Friday\\Thursday\\Sunday\\Saturday\\Sunday}
+	% {10\\81291?5728\\366205414?\\05907?4845\\0?90353403\\?43935806X\\303039357?\\02015?8025\\?201558025\\933290152?\\9332?0152X}
+	% {0\\6\\5\\0\\3\\7\\5\\0\\X\\9}
+	{https://github.com/paramrathour/CS-101/tree/main/Test Cases/Doomsday Algorithm/Input.txt}
+	{https://github.com/paramrathour/CS-101/tree/main/Test Cases/Doomsday Algorithm/Output.txt}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Doomsday Algorithm.cpp}
+\end{testcasesMore}
+\begin{funvideo}{\label{sec:fvdoomsday}}
+\href{https://youtu.be/z2x3SSBVGJU}{The Doomsday Algorithm -- Numberphile}
+\end{funvideo}

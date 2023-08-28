@@ -1,0 +1,68 @@
+\KOMAoptions{paper=A3}
+\recalctypearea
+\subsection{Tower of Hanoi}
+Tower of Hanoi is a mathematical puzzle with three rods (A,B,C) and n disks on left rod (A) with in decreasing
+order of their radius from top to bottom .
+
+The objective of the puzzle is to move the entire stack of disks to the
+rightmost rod (C), obeying the following simple rules,
+\begin{itemize}
+	\item Only one disk can be moved at a time.
+	\item Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack; i.e., a disk can only be moved if it is the uppermost disk on a stack.
+	\item No disk may be placed on top of a smaller disk.
+\end{itemize}
+Check any of the linked videos below for more information.\\
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width = 0.3\linewidth]{Tower of Hanoi.pdf}
+% 	\caption{An example for $n=3$, (\href{https://www.algotree.org/images/Tower_Of_Hanoi.svg}{Image} by \href{https://www.algotree.org/algorithms/recursive/tower_of_hanoi/}{Algotree}}
+% 	\label{fig:quicksort}
+% \end{figure}
+\textbf{Problem Statement:}
+For a given $n$, output the sequence of steps to be taken in the following format:
+
+\verb!Disk <disk-number> from <rod-name> to <rod-name>!.
+
+Solve the problem \textbf{with recursion} and \textbf{without recursion} as well :).
+\begin{testcasesMore}
+	{$t$ \hfill(number of test cases, an integer)\\$n_1\ n_2\ \ldots \ n_t$\hfill($t$ numbers)}
+	{Corresponding steps till completetion\hfill(each step on a new line for each test case)}
+	{$1\leq n_i \leq 20$\hfill(integers)}
+	{4\\1 2 3 4}
+	{Disk 1 from A to B\\\\
+	Disk 1 from A to C\\
+	Disk 2 from A to B\\
+	Disk 1 from C to B\\\\
+	Disk 1 from A to B\\
+	Disk 2 from A to C\\
+	Disk 1 from B to C\\
+	Disk 3 from A to B\\
+	Disk 1 from C to A\\
+	Disk 2 from C to B\\
+	Disk 1 from A to B\\\\
+	Disk 1 from A to C\\
+	Disk 2 from A to B\\
+	Disk 1 from C to B\\
+	Disk 3 from A to C\\
+	Disk 1 from B to A\\
+	Disk 2 from B to C\\
+	Disk 1 from A to C\\
+	Disk 4 from A to B\\
+	Disk 1 from C to B\\
+	Disk 2 from C to A\\
+	Disk 1 from B to A\\
+	Disk 3 from C to B\\
+	Disk 1 from A to C\\
+	Disk 2 from A to B\\
+	Disk 1 from C to B}
+	{https://github.com/paramrathour/CS-101/tree/main/Test Cases/Tower of Hanoi/Input.txt}
+	{https://github.com/paramrathour/CS-101/tree/main/Test Cases/Tower of Hanoi/Output.txt}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Tower of Hanoi.cpp}
+\end{testcasesMore}
+\begin{funvideo}
+	Binary, Hanoi and Sierpinski, \href{https://youtu.be/2SUvWfNJSsM}{part 1}, \href{https://youtu.be/bdMfjfT0lKk}{part 2} -- \href{https://www.youtube.com/@3blue1brown}{3Blue1Brown}\\
+	\href{https://youtu.be/rf6uf3jNjbo}{Towers of Hanoi: A Complete Recursive Visualization -- Reducible}\\
+	\href{https://youtu.be/MbonokcLbNo}{The ultimate tower of Hanoi algorithm -- Mathologer}
+\end{funvideo}
+\KOMAoptions{paper=A4}
+\recalctypearea

@@ -1,0 +1,43 @@
+\subsection{Newton Interpolation}{\label{pp:newtoninterpolation}}
+For a given sequence of numbers $\{a_0,\ldots,a_{n-1}\}$, we define $\Delta ^{k}$ inductively as follows
+\begin{itemize}
+	\item $\Delta ^{0}=\{a_0,\ldots,a_{n-1}\}$
+	\item If $\Delta ^{i}=\{b_0,b_1,\ldots,b_{n-i-2},b_{n-i-1}\}$ then $\Delta ^{i+1}=\{b_1-b_0,\ldots,b_{n-i-1}-b_{n-i-2}\}$; i.e., difference of succesive terms gives the next sequence. Also, we treat $\Delta ^{k}$ as an array with $i$\textsuperscript{th} index as $\Delta ^{k}[i]$.
+\end{itemize}
+Notice, that number of terms reduces by 1 after each iteration. Hence $\Delta ^{n-1}$ has only 1 term and we stop.
+
+Now, using these $\Delta ^{i}$'s, we can constuct a polynomial $f$ such that $f(i)=a_i$ for $i=\{0,1,\ldots,n-1\}$. This process is called \emph{interpolation} and the formula for $f$ is given below.
+\begin{equation}
+	f(x)=\sum _{k=0}^{n-1}{\binom {x}{k}}\,\Delta ^{k}[0]=\sum _{k=0}^{n-1}\frac{(x)_k}{k!}\,\Delta ^{k}[0]%\sum _{k=0}^{\infty }{\frac {\Delta ^{k}[a]}{k!}}\,(x-a)_{k}=
+	\quad\text{ where $(x)_0 = 1$ and $(x)_k=x(x-1)\cdots(x-(k-1))$}
+\end{equation}
+An example from \href{https://en.wikipedia.org/wiki/Finite_difference#Newton's_series}{wikipedia},
+\vspace{-1em}\begin{equation}
+	{{
+	\begin{matrix}{
+	\begin{array}{c|ccc} x&f=\Delta ^{0}&\Delta ^{1}&\Delta ^{2}\\\hline 0&{\underline {2}}&&\\
+	&&{\underline {0}}&\\
+	1&2&&{\underline {2}}\\
+	&&2&\\
+	2&4&&
+	\end{array}}
+	&\quad {
+	\begin{aligned}
+	f(x)&=\Delta ^{0}\cdot {\dfrac {(x)_{0}}{0!}}+\Delta ^{1}\cdot {\dfrac {(x)_{1}}{1!}}+\Delta ^{2}\cdot {\dfrac {(x)_{2}}{2!}}\quad\\\\
+	&=2\cdot 1+0\cdot {\dfrac {x}{1}}+2\cdot {\dfrac {(x)(x-1)}{2}}\\\\
+	&=2+(x)(x-1)
+	\end{aligned}}\end{matrix}}}\vspace{-0.5em}
+\end{equation}
+\textbf{Problem Statement:}\\
+For a given sequence $\{a_0,\ldots,a_{n-1}\}$, find its interpolated polynomial and predict the next term $a_{n}=f(n)$.
+\begin{testcases}
+	{$t$ \hfill(number of test cases, an integer)\\$n_i\quad a_{0}\ a_1\ \ldots\ a_{n_i-1}$ \hfill($n_i+1$ space seperated integers for each testcase)}
+	{$f(n_i)$, followed by expansion of $f(x)\displaystyle\sum _{k=0}^{n-1}\frac{x_k}{k!}\,\Delta ^{k}[0]$, ignoring $\Delta ^{i}[0]=0$ terms and $\Delta ^{i}[0]=\pm1$ coefficients.}
+	{$1 \leq n_i \leq 20$, $-1000 \leq a_i \leq 1000$}
+	{4\\3\quad2 2 4\\4\quad1 2 3 4\\7\quad3 1 4 1 5 9 2\\9\quad1 2 4 8 16 31 57 99 163}
+	{8\quad2(x)\_{0}/0! + 2(x)\_{2}/2!\\5\quad(x)\_{0}/0! + (x)\_{1}/1!\\45\quad3(x)\_{0}/0! - 2(x)\_{1}/1! + 5(x)\_{2}/2! - 11(x)\_{3}/3! + 24(x)\_{4}/4! - 44(x)\_{5}/5! + 60(x)\_{6}/6!\\256\quad(x)\_{0}/0! + (x)\_{1}/1! + (x)\_{2}/2! + (x)\_{3}/3! + (x)\_{4}/4!}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Newton Interpolation.cpp}
+\end{testcases}
+\begin{funvideo}
+	\href{https://youtu.be/4AuV93LOPcE}{Why don't they teach Newton's calculus of `What comes next?' -- Mathologer}
+\end{funvideo}

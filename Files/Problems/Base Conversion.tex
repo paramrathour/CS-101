@@ -1,0 +1,34 @@
+\subsection{Base Conversion}{\label{pp:baseconversion}}
+In this problem, you will convert binary number to decimal and vice versa.
+\begin{hint}
+First solve the conversion problem for integers and then try to incorporate their fractional part.
+\end{hint}
+\begin{enumerate}[label=(\alph*)]
+\item 
+\textbf{Problem Statement:}\\
+Convert $t$ positive binary numbers ($n_1,n_2,\ldots,n_t$) to decimal.
+\begin{testcases}
+	{$t$ \hfill(number of test cases, an integer)\\
+	$n_1\ n_2\ \ldots\ n_t$ \hfill($t$ space seperated numbers for each testcase)}
+	{Converted decimal number \hfill(space seperated)}
+	{$0\leq n_i\leq 10^{15}$, a maximum of 8 digits after binary point (`.') \hfill(base 2, a double)}
+	{9\\1 111 110001 101010111 100101100001 1.00011001 11.001001 110.01 10110.01110101}
+	{1.00000000\quad7.00000000\quad49.00000000\quad343.00000000\quad2401.00000000\quad1.09765625\quad3.14062500\quad6.25000000\quad22.45703125}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Base Conversion I.cpp}
+\end{testcases}
+\item 
+\textbf{Problem Statement:}\\
+Convert $t$ positive decimal numbers ($n_1,n_2,\ldots,n_t$) to binary.
+\begin{testcases}
+	{$t$ \hfill(number of test cases, an integer)\\
+	$n_1\ n_2\ \ldots\ n_t$ \hfill($t$ space seperated numbers for each testcase)}
+	{Converted binary number truncated till 8 decimal places \hfill(space seperated)}
+	{$0\leq n_i\leq 2500$, a maximum of 8 digits after decimal point (`.') \hfill(base 10, a double)}
+	{9\\1 7 49 343 2401 1.1 3.1415 6.25 22.459}
+	{1.00000000\quad111.00000000\quad110001.00000000\quad101010111.00000000\quad100101100001.00000000\quad1.00011001\quad11.00100100\quad110.01000000\quad10110.01110101}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Base Conversion II.cpp}
+\end{testcases}
+\end{enumerate}
+\begin{funvideo}
+\href{https://youtu.be/xNx3JxRhnZE}{Dungeon Numbers -- Numberphile}
+\end{funvideo}

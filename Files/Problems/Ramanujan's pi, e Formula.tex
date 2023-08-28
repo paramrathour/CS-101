@@ -1,0 +1,32 @@
+\subsection{Ramanujan's $\sqrt{\frac{\pi e}{2}}$ Formula}{\label{pp:ramanujanpieformula}}
+This problem is a fusion of \ref{pp:simplecontinuedfractions} and \ref{pp:harmonic}. It is recommended to solve them before proceeding to this problem.
+\begin{equation}
+ \sqrt{\frac{\pi e}{2}}=\cfrac{1}{1+{\cfrac {1}{1+{\cfrac {2}{1+{\cfrac {3}{1+{{\cfrac{4}{1+{_{\ddots }}} }}}}}}}}} + \left\{1 + \frac{1}{1\cdot3}+\frac{1}{1\cdot3\cdot5}+\frac{1}{1\cdot3\cdot5\cdot7}+\frac{1}{1\cdot3\cdot5\cdot7\cdot9}+\cdots\right\}
+\end{equation}
+Let's define $c_n$ as $n$-th convergent of this infinite continued fraction and sum as below
+\begin{equation*}
+c_n={\underset {i=0}{\overset {n }{\mathrm {K} }}}{\frac {a_i}{1}} + \sum_{i = 0}^n \frac{1}{(2n+1)!!} \quad\text{where }\quad a_i = \begin{cases} 
+      1 & i = 0 \\
+      i & i > 0
+   \end{cases}\quad\Rightarrow\quad  \sqrt{\frac{\pi e}{2}} = \lim_{n\rightarrow\infty}c_n
+% \cfrac{1}{1+{\cfrac {1}{1+{\cfrac {2}{\ddots_{\overline{1+{\underline{n}}}}}}}}}
+% c_n=\cfrac{1}{1+{\cfrac {1}{1+{\cfrac {2}{\ddots_{1+\mfrac{n}{}}}}}}} + \sum_{i = 0}^n \frac{1}{(2n+1)!!}
+%  \sqrt{\frac{c_n}{2}}=\cfrac{1}{1+{\cfrac {1}{1+{\cfrac {2}{\ddots_{1+\mfrac{n-1}{n}}}}}}} + \sum_{i = 0}^n \frac{1}{(2n+1)!!}
+\end{equation*}
+\begin{note}
+$n!! \neq (n!)!$, $n!!$ is \href{https://en.wikipedia.org/wiki/Double_factorial}{double factorial} of $n$.
+\end{note}
+\textbf{Problem Statement:}\\
+Calculate $c_n$ for all test cases accurate till 10 decimal places. See Starter code (below) for more details.
+\begin{testcases}
+	{$t$ \hfill(number of test cases, an integer)\\$n_1\ n_2\ \ldots\ n_t$ \hfill($t$ space seperated integers for each testcase)}
+	{$c_{n_i}$ \hfill(each test case on a newline, accurate till 10 decimal places)}
+	{$0 \leq n_i \leq 10^{6}$}
+	{12\\0 1 2 3 5 10 20 30 50 100 1000 1000000}
+	{2.0000000000\\1.8333333333\\2.1500000000\\2.0095238095\\2.0422571580\\2.0709281786\\2.0667462769\\2.0664199465\\2.0663680635\\2.0663656843\\2.0663656771\\2.0663656771}
+	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Ramanujan's pi, e Formula.cpp}
+\end{testcases}
+\begin{funvideo}
+\href{https://youtu.be/7eboFOkRHr4}{7 factorials you probably didn't know -- blackpenredpen}
+\\\href{https://youtu.be/P0idBBhGNgU}{The Man Who Knew Infinity -- Tipping Point Math}
+\end{funvideo}
