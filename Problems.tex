@@ -2,6 +2,8 @@
 
 \input{Files/Packages}
 \input{Files/Custom}
+\usepackage{subfiles}
+\graphicspath{ {./Media/}}
 
 \title{\vspace{-2em}Practice Problems\\[0.5em]\Large{Computer Programming and Utilization}}
 \author{Param Rathour\\\url{https://paramrathour.github.io/CS101}}
@@ -9,27 +11,27 @@
 
 \begin{document}
 \pagestyle{empty}
-\input{Files/Cover}
+\subfile{Files/Cover}
 \clearpage
 \maketitle
-\input{Files/Introduction}
+\subfile{Files/Introduction}
 \clearpage
-\input{Files/Some Tips}
+\subfile{Files/Some Tips}
 \clearpage
 \tableofcontents
-\input{Files/Sections/Prodigal Patterns}
-\input{Files/Sections/Expression Obsession}
-\input{Files/Sections/Traditional Conditionals}
-\input{Files/Sections/Iteration Domination}
-\input{Files/Sections/Function Admiration}
-\input{Files/Sections/Recursion Salvation}
-\input{Files/Sections/Paths Paranoia}
-\input{Files/Sections/Sequence Imminence}
-\input{Files/Sections/Array Leeway}
-\input{Files/Sections/Array Powerplay}
-\input{Files/Sections/Programming Expositions}
-\input{Files/Sections/Fractal Fun}
-% \input{Files/Classes}
-% \input{Files/Advanced Concepts}
-% \input{Files/Hints}
+\subfile{Files/Sections/Prodigal Patterns}
+\subfile{Files/Sections/Expression Obsession}
+\subfile{Files/Sections/Traditional Conditionals}
+\subfile{Files/Sections/Iteration Domination}
+\subfile{Files/Sections/Function Admiration}
+\subfile{Files/Sections/Recursion Salvation}
+\subfile{Files/Sections/Paths Paranoia}
+\subfile{Files/Sections/Sequence Imminence}
+\subfile{Files/Sections/Array Leeway}
+\subfile{Files/Sections/Array Powerplay}
+\subfile{Files/Sections/Programming Expositions}
+\subfile{Files/Sections/Fractal Fun}
+% \subfile{Files/Classes}
+% \subfile{Files/Advanced Concepts}
+% \subfile{Files/Hints}
 \end{document}
