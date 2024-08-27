@@ -34,7 +34,7 @@ An example from \href{https://en.wikipedia.org/wiki/Finite_difference#Newton's_s
 For a given sequence $\{a_0,\ldots,a_{n-1}\}$, find its interpolated polynomial and predict the next term $a_{n}=f(n)$.
 \begin{testcases}
 	{$t$ \hfill(number of test cases, an integer)\\$n_i\quad a_{0}\ a_1\ \ldots\ a_{n_i-1}$ \hfill($n_i+1$ space seperated integers for each testcase)}
-	{$f(n_i)$, followed by expansion of $f(x)\displaystyle\sum _{k=0}^{n-1}\frac{x_k}{k!}\,\Delta ^{k}[0]$, ignoring $\Delta ^{i}[0]=0$ terms and $\Delta ^{i}[0]=\pm1$ coefficients.}
+	{$f(n_i)$, followed by expansion of $f(x)=\displaystyle\sum _{k=0}^{n-1}\frac{x_k}{k!}\,\Delta ^{k}[0]$, ignoring $\Delta ^{i}[0]=0$ terms and $\Delta ^{i}[0]=\pm1$ coefficients.}
 	{$1 \leq n_i \leq 20$, $-1000 \leq a_i \leq 1000$}
 	{4\\3\quad2 2 4\\4\quad1 2 3 4\\7\quad3 1 4 1 5 9 2\\9\quad1 2 4 8 16 31 57 99 163}
 	{8\quad2(x)\_{0}/0! + 2(x)\_{2}/2!\\5\quad(x)\_{0}/0! + (x)\_{1}/1!\\45\quad3(x)\_{0}/0! - 2(x)\_{1}/1! + 5(x)\_{2}/2! - 11(x)\_{3}/3! + 24(x)\_{4}/4! - 44(x)\_{5}/5! + 60(x)\_{6}/6!\\256\quad(x)\_{0}/0! + (x)\_{1}/1! + (x)\_{2}/2! + (x)\_{3}/3! + (x)\_{4}/4!}
