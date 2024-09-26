@@ -1,7 +1,7 @@
 \documentclass[../../Problems]{subfiles}
 \begin{document}
 \subsection{Josephus Problem}
-Suppose there are $n$ terrorists around a circle facing towards the centre. They are numbered $1$ to $n$ along clockwise direction. Initially, terrorist 1 has the sword. Now, the terrorist with sword kills the $k$\textsuperscript{th} nearest alive terrorist to its left and passes the sword to $(k+1)$\textsuperscript{st} nearest alive terrorist to its left. The process repeats. Basically, every $k$\textsuperscript{th} terrorist is killed until only one survives. Then the last terrorist is killed.
+Suppose there are $n$ terrorists around a circle facing towards the centre. They are numbered $1$ to $n$ along clockwise direction. Initially, terrorist $1$ has the sword. Now, the terrorist with sword kills the $k$\textsuperscript{th} nearest alive terrorist to its left and passes the sword to $(k+1)$\textsuperscript{st} nearest alive terrorist to its left. The process repeats. Basically, every $k$\textsuperscript{th} terrorist is killed until only one survives. Then the last terrorist is killed.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.15\linewidth]{Josephus.pdf}
@@ -10,8 +10,8 @@ Suppose there are $n$ terrorists around a circle facing towards the centre. They
 \end{figure}
 \vspace{-1.5em}
 For example, in the above arrangement,\\
-when $k=1,$ 1 kills 2, 3 kills 4, 5 kills 6, 7 kills 8, 9 kills 10, 1 kills 3, 5 kills 7, 9 kills 1 and 5 kills 9. So, 5 survives;\\% and is killed last;\\
-when $k=2,$ 1 kills 3, 4 kills 6, 7 kills 9, 10 kills 2, 4 kills 7, 8 kills 1, 4 kills 8, 10 kills 5 and 4 kills 10. So, 4 survives.\\% and is killed last.
+when $k=1,$ $1$ kills $2$, $3$ kills $4$, $5$ kills $6$, $7$ kills $8$, $9$ kills $10$, $1$ kills $3$, $5$ kills $7$, $9$ kills $1$ and $5$ kills $9$. So, $5$ survives;\\% and is killed last;\\
+when $k=2,$ $1$ kills $3$, $4$ kills $6$, $7$ kills $9$, $10$ kills $2$, $4$ kills $7$, $8$ kills $1$, $4$ kills $8$, $10$ kills $5$ and $4$ kills $10$. So, $4$ survives.\\% and is killed last.
 \textbf{Problem Statement:}\\
 For a given $n, k$ pair, and starting position $1$, print the terrorists in the sequence they are killed.
 \begin{testcases}
