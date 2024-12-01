@@ -7,13 +7,19 @@ Ackermann Function is defined as follows
 		\op{A}(0,n)&=n+1\\
 		\op{A}(m,0)&=\op{A}(m-1,1)\\
 		\op{A}(m,n)&=\op{A}(m-1,\op{A}(m,n-1))
+	\end{aligned} \quad\text{or in terms of \hyperref[pp:tetration]{arrow-notation}}\quad
+		\begin{aligned}
+		\op{A}(m,n) =
+			\begin{cases}n+1&m=0\\
+			2\uparrow ^{m-2}(n+3)-3&m>0
+			\end{cases}
 	\end{aligned}
 \end{equation}
 \textbf{Problem Statement:}\\
 Calculate $\op{A}(m,n)$ (given $m,n$) for all test cases.
 \begin{testcasesFunction}
 	{$t$ \hfill(number of test cases, an integer)\\
-	$m_1\ n_1\ \quad m_2\ n_2\ \quad \ldots\quad m_t\ n_t$ \hfill($t$ space seperated integer pairs for each testcase)}
+	$m_1\ n_1\ \quad m_2\ n_2\ \quad \ldots\quad m_t\ n_t$ \hfill($t$ space separated integer pairs for each testcase)}
 	{$\op{A}(m_i,n_i)$\hfill(each on a newline)}
 	{$m_i,n_i$ are postive integers such that $\op{A}(m_i,n_i)$ is within the range of int}
 	{\texttt{int A(int m, int n)} -- returns $A(m,n)$}

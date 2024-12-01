@@ -6,7 +6,7 @@ The abundancy index of a number is the ratio of sum of divisors of that number a
 \begin{equation}
 \text{abundancy index} = \frac{\sigma(n)}{n}\quad\text{where $\sigma(n)$ is the sum of divisors of $n$}
 \end{equation}
-For example, 6 and 28 form a friendly pair\footnote{in fact, they are called perfect numbers as their abundancy = 2} as
+For example, $6$ and $28$ form a friendly pair\footnote{in fact, they are called perfect numbers as their abundancy = $2$} as
 \begin{equation*}
 {\displaystyle {\dfrac {\sigma (6)}{6}}={\dfrac {1+2+3+6}{6}}={\dfrac {12}{6}}=2={\dfrac {56}{28}}={\dfrac {1+2+4+7+14+28}{28}}= {\dfrac {\sigma (28)}{28}}}
 \end{equation*} 
@@ -15,14 +15,14 @@ Given two numbers $a,b$ check if they form a friendly pair.\\
 Express the common abundancy (if it exists) as a quotient $p/q$ where $p,q$ are integers and $q\neq0$.
 \begin{testcasesFunction}
 	{$t$ \hfill(number of test cases, an integer)\\
-	$a_1\ b_1\ \quad a_2\ b_2\ \quad \ldots\quad a_t\ b_t$ \hfill($t$ space seperated integer pairs for each testcase)}
+	$a_1\ b_1\ \quad a_2\ b_2\ \quad \ldots\quad a_t\ b_t$ \hfill($t$ space separated integer pairs for each testcase)}
 	{Output the common abundancy if $a_i,b_i$ form a friendly pair else output $-1$ \hfill(each test case on a newline)\\
 	$p_{a_i}/q_{a_i}$ \hfill(where common abundancy $ = p_{a_i}/q_{a_i}$ and $p_{a_i},q_{a_i}$ are integers \& $q_{a_i}\neq0$ in irreducible form)}
 	{$1 < a_i,\ b_i \leq 10^{9}$}
 	{\texttt{long long sum\_of\_divisors(int n)} -- returns the sum of divisors of $n$\\
 	\texttt{bool friendly\_pair\_check(int a, int b)} -- outputs the common abundancy index or $-1$}
-	{10\\6 28\qquad10 20\qquad30 140\qquad30 2480\qquad135 819\qquad42 544635\qquad1556 9285\qquad4320 4680\qquad693479556 8640\qquad84729645 155315394}
-	{2\\-1\\12/5\\12/5\\16/9\\16/7\\-1\\7/2\\127/36\\896/351}
+	{11\\6 28\qquad10 20\qquad30 140\qquad30 2480\qquad24 91963648\qquad135 819\qquad42 544635\qquad1556 9285\qquad4320 4680\qquad693479556 8640\qquad84729645 155315394}
+	{2\\-1\\12/5\\12/5\\5/2\\16/9\\16/7\\-1\\7/2\\127/36\\896/351}
 	{https://github.com/paramrathour/CS-101/tree/main/Starter Codes/Friendly Pair.cpp}
 \end{testcasesFunction}
 \begin{funvideo}

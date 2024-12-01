@@ -1,19 +1,19 @@
 \documentclass[../../Problems]{subfiles}
 \begin{document}
 \subsection{Wallis Product}{\label{pp:wallis}}
-$\pi/2$ is given by below infinite product formula. It is the ratio of product of even squares and odd squares
+$\pi/2$ is given by below infinite product formula. It is the ratio of product of even squares and odd squares.
 \begin{equation}
 \frac{\pi}{2} = {\frac {2}{1}}\cdot {\frac {2}{3}}\cdot {\frac {4}{3}}\cdot {\frac {4}{5}}\cdot {\frac {6}{5}}\cdot {\frac {6}{7}}\cdots= \prod _{i=1}^{\infty}\left({\frac {2i}{2i-1}}\cdot {\frac {2i}{2i+1}}\right)
 \end{equation}
-Let's define $\pi_n$ as $n$-th iteration of this infinite product as below
+Let's define $\pi_n$ as $n$-th iteration of this infinite product as below:
 \begin{equation*}
 \frac{\pi_n}{2} = {\frac {2}{1}}\cdot {\frac {2}{3}}\cdot {\frac {4}{3}}\cdot {\frac {4}{5}}\cdot {\frac {6}{5}}\cdot {\frac {6}{7}}\cdots{\frac {2n}{2n-1}}\cdot {\frac {2n}{2n+1}} = \prod _{i=1}^{n}\left({\frac {2i}{2i-1}}\cdot {\frac {2i}{2i+1}}\right)
 \end{equation*}
 \textbf{Problem Statement:}\\
-Calculate $\pi_n$ for all test cases accurate till 10 decimal places. See Starter code (below) for more details.
+Calculate $\pi_n$ for all test cases accurate till $10$ decimal places. See starter code (below) for more details.
 \begin{testcases}
-	{$t$ \hfill(number of test cases, an integer)\\$n_1\ n_2\ \ldots\ n_t$ \hfill($t$ space seperated integers for each testcase)}
-	{$\pi_{n_i}$ \hfill(each test case on a newline, accurate till 10 decimal places)}
+	{$t$ \hfill(number of test cases, an integer)\\$n_1\ n_2\ \ldots\ n_t$ \hfill($t$ space separated integers for each testcase)}
+	{$\pi_{n_i}$ \hfill(each test case on a newline, accurate till $10$ decimal places)}
 	{$1 \leq n_i \leq 10^{6}$}
 	{11\\1 2 3 5 10 20 30 50 100 1000 1000000}
 	{2.6666666667\\2.8444444444\\2.9257142857\\3.0021759546\\3.0677038066\\3.1035169615\\3.1159482859\\3.1260789002\\3.1337874906\\3.1408077460\\3.1415918682}

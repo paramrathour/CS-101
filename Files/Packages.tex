@@ -13,7 +13,7 @@
 \usepackage[linesnumbered,ruled]{algorithm2e}
 
 \usepackage{amsmath, amssymb, amsfonts, amsthm, mathtools}
-\usepackage{nccmath}
+\usepackage{nccmath, bm}
 \newtheorem{theorem}{Theorem}
 \newtheorem*{note}{Note}
 \newtheorem*{funvideo}{Fun Video}
@@ -29,6 +29,10 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric}
 \usetikzlibrary{calc}
+\newcommand\encircle[1]{%
+  \tikz[baseline=(X.base)] 
+    \node (X) [draw, shape=circle, inner sep=0] {\strut #1};}
+
 \usepackage{anyfontsize}
 % \usepackage{emoji}
 \usepackage[most]{tcolorbox}
