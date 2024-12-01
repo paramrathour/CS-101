@@ -13,11 +13,11 @@ For any integer $n$, the sequence of Fibonacci numbers $F_i \ \%\ n$ is periodic
 
 The Pisano period, denoted $\pi(n)$, is the length of the period of this sequence.
 
-For example, the sequence of Fibonacci numbers modulo 3 begins:
+For example, the sequence of Fibonacci numbers modulo $3$ begins:
 \begin{equation*}
 	0, 1, 1, 2, 0, 2, 2, 1, 0, 1, 1, 2, 0, 2, 2, 1, 0, 1, 1, 2, 0, 2, 2, 1, 0,\ldots\text{(\href{https://oeis.org/A082115}{A082115})}
 \end{equation*}
-This sequence has period 8, so $\pi(3) = 8$.
+This sequence has period $8$, so $\pi(3) = 8$.
 
 Basically, the remainders repeat when these numbers are divided by $n$. You have to find this period.
 
@@ -25,8 +25,8 @@ Basically, the remainders repeat when these numbers are divided by $n$. You have
 Find Pisano period of $t$ numbers $n_1,n_2,\ldots,n_t$
 \begin{testcases}
 	{$t$ \hfill(number of test cases, an integer)\\
-	$n_1\ n_2\ \ldots\ n_t$ \hfill($t$ space seperated numbers for each testcase)}
-	{$\pi(n_i)$ \hfill(each test case space seperated)}
+	$n_1\ n_2\ \ldots\ n_t$ \hfill($t$ space separated numbers for each testcase)}
+	{$\pi(n_i)$ \hfill(each test case space separated)}
 	{$1 < n_i \leq 1000$}
 	{17\\2 3 5 8 13 21 34 55 89 144 233 987 30 50 98 750 1000}
 	{3\quad8\quad20\quad12\quad28\quad16\quad36\quad20\quad44\quad24\quad52\quad32\quad120\quad300\quad336\quad3000\quad1500}

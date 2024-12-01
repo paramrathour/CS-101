@@ -12,8 +12,8 @@ For example, starting with the sequence \textbf{0},
 \end{itemize}
 Also, by using Thue-Morse sequence elements in the turtle simulator, we get a mysterious curve\footnote{called Koch curve, it is a fractal curve that has infinite length but contained in a finite area. Can you see why?} by following the below rule.
 \begin{itemize}
-	\item If an element is 0, then the turtle rotates \verb!right! by 180\textdegree.
-	\item If an element is 1, then the turtle moves \verb!forward! by one unit and then rotates \verb!right! by 60\textdegree.
+	\item If an element is 0, then the turtle rotates \verb!right! by $180^\circ$.
+	\item If an element is 1, then the turtle moves \verb!forward! by one unit and then rotates \verb!right! by $60^\circ$.
 \end{itemize}
 Can you figure out the pattern of this curve?
 
@@ -22,7 +22,7 @@ Generate the first $n$ elements of the Thue-Morse sequence and draw the correspo
 Scale the curve in such a way that it roughly takes same width and height for all $n$.
 % \begin{testcasesMore}
 % 	{$t$ \hfill(number of test cases, an integer)\\
-% 	$n_1\ n_2\ \ldots n_t$ \hfill($t$ space seperated integers for each testcase)}
+% 	$n_1\ n_2\ \ldots n_t$ \hfill($t$ space separated integers for each testcase)}
 % 	{First $n_i$ elements of the Thue-Morse sequence and the curve.\hfill(each testcase on a newline)}
 % 	{$1 \leq n_i \leq 100000$ ($n_i$ need not be a power of 2)}
 % 	{4\\2 32 111 128}
@@ -46,31 +46,31 @@ Scale the curve in such a way that it roughly takes same width and height for al
 	\centering
 	\begin{subfigure}{0.3\linewidth}
 		\includegraphics[width = \linewidth]{Thue-Morse Sequence/2.png}
-		\caption{Iteration 0, $n=2$}
+		\caption{Iteration $0$, $n=2$}
 	\end{subfigure}
 	\begin{subfigure}{0.3\linewidth}
 		\includegraphics[width = \linewidth]{Thue-Morse Sequence/8.png}
-		\caption{Iteration 1, $n=8$}
+		\caption{Iteration $1$, $n=8$}
 	\end{subfigure}
 	\begin{subfigure}{0.3\linewidth}
 		\includegraphics[width = \linewidth]{Thue-Morse Sequence/32.png}
-		\caption{Iteration 2, $n=32$}
+		\caption{Iteration $2$, $n=32$}
 	\end{subfigure}
 	\begin{subfigure}{0.3\linewidth}
 		\includegraphics[width = \linewidth]{Thue-Morse Sequence/128.png}
-		\caption{Iteration 3, $n=128$}
+		\caption{Iteration $3$, $n=128$}
 	\end{subfigure}
 	\begin{subfigure}{0.3\linewidth}
 		\includegraphics[width = \linewidth]{Thue-Morse Sequence/512.png}
-		\caption{Iteration 4, $n=512$}
+		\caption{Iteration $4$, $n=512$}
 	\end{subfigure}
 	\begin{subfigure}{0.3\linewidth}
 		\includegraphics[width = \linewidth]{Thue-Morse Sequence/2048.png}
-		\caption{Iteration 5, $n=2048$}
+		\caption{Iteration $5$, $n=2048$}
 	\end{subfigure}
 	\begin{subfigure}{0.3\linewidth}
 		\includegraphics[width = \linewidth]{Thue-Morse Sequence/8192.png}
-		\caption{Iteration 6, $n=8192$}
+		\caption{Iteration $6$, $n=8192$}
 	\end{subfigure}
 	\caption{Koch Curve Iterations and the outputs for odd powers of 2}
 \end{figure}
