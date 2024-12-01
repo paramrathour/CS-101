@@ -7,6 +7,12 @@ Ackermann Function is defined as follows
 		\op{A}(0,n)&=n+1\\
 		\op{A}(m,0)&=\op{A}(m-1,1)\\
 		\op{A}(m,n)&=\op{A}(m-1,\op{A}(m,n-1))
+	\end{aligned} \quad\text{or in terms of \hyperref[pp:tetration]{arrow-notation}}\quad
+		\begin{aligned}
+		\op{A}(m,n) =
+			\begin{cases}n+1&m=0\\
+			2\uparrow ^{m-2}(n+3)-3&m>0
+			\end{cases}
 	\end{aligned}
 \end{equation}
 \textbf{Problem Statement:}\\

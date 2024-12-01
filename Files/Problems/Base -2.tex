@@ -3,19 +3,19 @@
 \subsection{Base --2}
 By using $-2$ as the base, both positive and negative integers can be expressed without an explicit sign or other irregularity. Just like positive integral bases, any base $-2$ number can be represented as follows:
 \begin{equation}
-(a_n\ldots a_2a_1a_0)_{(-2)} = a_n(-2)^n+\cdots+a_2(-2)^2+a_1(-2)^1+a_0(-2)^0 \quad\text{where $a_i$ is either 0 or 1}
+(a_n\ldots a_2a_1a_0)_{(-2)} = a_n(-2)^n+\cdots+a_2(-2)^2+a_1(-2)^1+a_0(-2)^0 \quad\text{where $a_i$ is either $0$ or $1$}
 \end{equation}
-To find base $-2$ representation of $n$, we repeatedly divide by $-2$ until the quotient becomes 0 and the remainders generated (which are either 0 or 1) will be the digits of base $-2$ representation.
+To find base $-2$ representation of $n$, we repeatedly divide by $-2$ until the quotient becomes $0$ and the remainders generated (which are either $0$ or $1$) will be the digits of base $-2$ representation.
 \begin{equation*}
 n = \text{Quotient}\times(-2) + \text{Reminder} \quad\rightarrow\quad \text{Quotient} = \text{Quotient}_{\text{new}}\times(-2) + \text{Reminder}_{\text{new}}
 \end{equation*}
 For $-3$, the process it as shown below,
 \begin{equation*}
 \begin{aligned}
--3&= 2\times(-2) + {1} &\quad\rightarrow\quad a_0 = 1\\
-2&= -1\times(-2) + {0} &\quad\rightarrow\quad a_1 = 0\\
--1&= 1\times(-2) + {1} &\quad\rightarrow\quad a_2 = 1\\
-1&= 0\times(-2) + {1} &\quad\rightarrow\quad a_3 = 1
+-3&= 2\times(-2) + \encircle{1} &\quad\rightarrow\quad a_0 = 1\\
+2&= -1\times(-2) + \encircle{0} &\quad\rightarrow\quad a_1 = 0\\
+-1&= 1\times(-2) + \encircle{1} &\quad\rightarrow\quad a_2 = 1\\
+1&= \underline{0}\times(-2) + \encircle{1} &\quad\rightarrow\quad a_3 = 1
 \end{aligned}
 \end{equation*}
 Hence $(-3)_{10} = (1101)_{(-2)}$.

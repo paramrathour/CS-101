@@ -13,7 +13,7 @@ We can use a much faster method which involves \emph{repeated squaring} of $x \M
 x \Mod k \rightarrow x^2 \Mod k \rightarrow x^4 \Mod k \rightarrow x^8 \Mod k \rightarrow \cdots \rightarrow x^{2^{\lfloor\log y\rfloor}} \Mod k
 \end{equation}
 The idea is to multiply some of the above numbers and get $x^y \Mod k$.\\
-This is achieved by choosing all powers that have 1 in binary representation of $y$.\\
+This is achieved by choosing all powers that have $1$ in binary representation of $y$.\\
 For example,
 \begin{equation*}
 x^{25} = x ^ {11001_2} = x ^ {10000_2} \cdot x ^ {1000_2} \cdot x ^ {1_2} = x ^ {16} \cdot x ^ 8 \cdot x ^ 1
